@@ -16,19 +16,21 @@ namespace DataSmart.Data_Access_Layer
 
         public string connect { get => connection; }
 
-        private void Con (string connect) 
+        //Method to check if the server is connected.
+        private void IsServerConnected (string ConnectionString) 
         {
-            using (SqlConnection c = new SqlConnection(connect))
+            using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
                 try
                 {
-                    c.Open();
+                    sqlCon.Open();
                     connected = true;
                 }
                 catch (SqlException exc)
                 {
+                    MessageBox.Show(exc.Message);
                     connected = false;
-                    throw new Exception(exc.Message);
+                    //throw new Exception(exc.Message);
                 }
             }
         }
