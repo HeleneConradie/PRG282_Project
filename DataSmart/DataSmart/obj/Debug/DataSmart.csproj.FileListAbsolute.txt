@@ -1,0 +1,10 @@
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\bin\Debug\DataSmart.exe.config
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\bin\Debug\DataSmart.exe
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\bin\Debug\DataSmart.pdb
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.csprojAssemblyReference.cache
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Form1.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Properties.Resources.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.csproj.GenerateResource.cache
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.csproj.CoreCompileInputs.cache
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.exe
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.pdb
