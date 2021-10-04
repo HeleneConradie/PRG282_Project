@@ -12,7 +12,7 @@ namespace DataSmart.Data_Access_Layer
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
-        public ICollection<Module> ReadAll()
+        public List<Module> ReadAll()
         {
             try
             {
@@ -35,7 +35,7 @@ namespace DataSmart.Data_Access_Layer
                         ));
                 }
                 connection.Close();
-                return AllModules.ToList();
+                return AllModules;
             }
             catch (SqlException SqlEx)
             {

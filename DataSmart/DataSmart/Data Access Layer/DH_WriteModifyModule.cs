@@ -36,30 +36,43 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        //public bool UpdateModule(Module NewobjMod, Module OldobjMod)
-        //{
-        //    try
-        //    {
-        //        SqlConnection con = new SqlConnection(dbHandler.connect);
-        //        string Query = string.Format(@"UPDATE ModuleInformation SET (ModuleCode = '{1}', ModuleName = '{2}', 
-        //             ModuleDescription = '{3}', OnlineResources = '{4}') WHERE", 
-        //            OldobjMod.ModuleCode,
-        //            NewobjMod.ModuleCode,
-        //            NewobjMod.ModuleName,
-        //            NewobjMod.ModuleDescription,
-        //            NewobjMod.OnlineResources);
-        //        SqlCommand command = new SqlCommand(Query, con);
-        //        con.Open();
-        //        command.ExecuteNonQuery();
-        //        con.Close();
-        //        return true;
-        //    }
-        //    catch (SqlException sqlEx)
-        //    {
-        //        MessageBox.Show(sqlEx.Message);
-        //        return false;
-        //    }
-        //}
+        public bool UpdateModuleOnlineResources(string ModCode, string OnResources)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(dbHandler.connect);
+                string Query = "UPDATE ModuleInformation SET OnlineResources = '" + OnResources + "' WHERE ModuleCode = '" + ModCode + "'";
+                SqlCommand command = new SqlCommand(Query, con);
+                con.Open();
+                command.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+                return false;
+            }
+        }
+
+        public bool UpdateModuleDescription(string ModCode, string ModDesc)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(dbHandler.connect);
+                string Query = "UPDATE ModuleInformation SET ModuleDescription = '" + ModDesc + "' WHERE ModuleCode = '" + ModCode + "'";
+                SqlCommand command = new SqlCommand(Query, con);
+                con.Open();
+                command.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+                return false;
+            }
+        }
 
         public bool DeleteModule(string ModuleCode)
         {
