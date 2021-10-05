@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Logic Layer\ExceptionHandling.cs" />
+    <Compile Include="Business Logic Layer\Login.cs" />
+    <Compile Include="Business Logic Layer\Module.cs" />
+    <Compile Include="Business Logic Layer\RegisterUser.cs" />
+    <Compile Include="Business Logic Layer\Student.cs" />
+    <Compile Include="Business Logic Layer\StudentModule.cs" />
     <Compile Include="Data Access Layer\DH_DatabaseConnection.cs" />
     <Compile Include="Data Access Layer\DH_ReadLogin.cs" />
     <Compile Include="Data Access Layer\DH_ReadModule.cs" />
