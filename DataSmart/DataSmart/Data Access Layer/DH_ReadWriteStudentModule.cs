@@ -26,7 +26,7 @@ namespace DataSmart.Data_Access_Layer
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    AllModules.Add(StuNum + dr.GetValue(0).ToString());
+                    AllModules.Add(StuNum + "," + dr.GetValue(0).ToString());
                 }
                 connection.Close();
                 return AllModules;
@@ -45,8 +45,8 @@ namespace DataSmart.Data_Access_Layer
                 //Create list to display
                 List<string> AllModules = new List<string>();
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
-                string Query = "SELECT * FROM ModuleInformation";
-                SqlCommand cmd = new SqlCommand(Query, connection);
+                string Query1 = "SELECT * FROM ModuleInformation";
+                SqlCommand cmd = new SqlCommand(Query1, connection);
                 SqlDataReader dr;
                 connection.Open();
                 dr = cmd.ExecuteReader();
@@ -54,24 +54,18 @@ namespace DataSmart.Data_Access_Layer
                 {
                     AllModules.Add(StuNum + "," + dr.GetValue(0).ToString());
                 }
-                connection.Close();
-            }
-            catch (SqlException SqlEx)
-            {
-                MessageBox.Show(SqlEx.Message);
-            }
-
-            try
-            {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = string.Format(@"INSERT INTO StudentModule
+                foreach(var item in AllModules)
+                {
+                    string Query2 = string.Format(@"INSERT INTO StudentModule
                     (StudentNumber, ModuleCode) VALUES ('{0}', '{1}')",
-                    objStuMod.StudentNumber,
-                    objStuMod.ModuleCode);
-                SqlCommand command = new SqlCommand(Query, con);
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
+                    item.Substring(0,item.IndexOf(',')),
+                    item.Substring(item.IndexOf(','),item.Length));
+                    SqlCommand command = new SqlCommand(Query2, con);
+                    con.Open();
+                    command.ExecuteNonQuery();
+                    con.Close();
+                }
                 return true;
             }
             catch (SqlException sqlEx)
