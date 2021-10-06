@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataSmart.Business_Logic_Layer;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,17 +13,14 @@ namespace DataSmart.Data_Access_Layer
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
-        public bool InsertModule(Module objMod)
+        public bool InsertModule(string modcode, string modname, string moddesc, string onres)
         {
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
                 string Query = string.Format(@"INSERT INTO ModuleInformation
-                    (ModuleCode, ModuleName, ModuleDescription, OnlineResources) VALUES ('{0}', '{1}', '{2}', '{3}')", 
-                    objMod.ModuleCode,
-                    objMod.ModuleName,
-                    objMod.ModuleDescription,
-                    objMod.OnlineResources);
+                    (ModuleCode, ModuleName, ModuleDescription, OnlineResources) VALUES 
+                        ('" + modcode + "', '" + modname + "', '" + moddesc + "', '" + onres + "')");
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
                 command.ExecuteNonQuery();

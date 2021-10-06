@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataSmart.Business_Logic_Layer;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,13 +12,12 @@ namespace DataSmart.Data_Access_Layer
     class DH_ReadModule
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
+        List<Module> AllModules = new List<Module>();
 
         public List<Module> ReadAll()
         {
             try
             {
-                //Create list to display
-                List<Module> AllModules = new List<Module>();
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
                 string Query = "SELECT * FROM ModuleInformation";
                 SqlCommand cmd = new SqlCommand(Query, connection);
