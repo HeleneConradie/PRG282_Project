@@ -9,7 +9,7 @@ namespace DataSmart.Data_Access_Layer
 {
     class DH_WriteTextFiles
     {
-        public bool WriteTextFiles(string Login, string Detail)
+        public static bool WriteTextFiles(string Login, string Detail)
         {
             try
             {

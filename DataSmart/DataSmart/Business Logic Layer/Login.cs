@@ -24,10 +24,7 @@ namespace DataSmart.Business_Logic_Layer
                     }
                 }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
 }
