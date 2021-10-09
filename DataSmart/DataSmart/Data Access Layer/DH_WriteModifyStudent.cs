@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace DataSmart.Data_Access_Layer
 {
@@ -12,20 +13,13 @@ namespace DataSmart.Data_Access_Layer
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
-        public bool InsertStudent(Student objStu)
+        public bool InsertStudent(string StuNum, string StuName, string StuSurname, Image StuImage, string StuDOB, string StuGender, string Phone, string StuAddress)
         {
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = string.Format(@"INSERT INTO StudentInformation(StudentNumber, StudentFirtsName, StudentLastName, StudentImage, StudentDateOfBirth, StudentGender, StudentPhone, StudentAddress) Values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7}')",
-                    objStu.StudentNumber,
-                    objStu.StudentFirstName,
-                    objStu.StudentLastName,
-                    objStu.StudentImage,
-                    objStu.StudentDateOfBirth,
-                    objStu.StudentGender,
-                    objStu.StudentPhone,
-                    objStu.StudentAddress);
+                string Query = string.Format(@"INSERT INTO StudentInformation(StudentNumber, StudentFirtsName, StudentLastName, StudentImage, StudentDateOfBirth, StudentGender, StudentPhone, StudentAddress) 
+                    Values ('" + StuNum + "', '" + StuName + "', '" + StuSurname + "', '" + StuImage + "', '" + StuDOB + "', '" + StuGender + "', '" + Phone + "', '" + StuAddress + "')");
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
                 command.ExecuteNonQuery();
@@ -39,50 +33,13 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        public bool UpdateStudentImage(string StuNum, string StuImg)
+        public bool UpdateStudent(string StuNum, string StuName, string StuMName, string StuSurname, Image StuImage, string StuDOB, string StuGender, string Phone, string StuAddress)
         {
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE StudentInformation SET StudentImage = '" + StuImg + "' WHERE StudentNumber = '" + StuNum + "'";
-                SqlCommand command = new SqlCommand(Query, con);
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
-                return true;
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show(sqlEx.Message);
-                return false;
-            }
-        }
-
-        public bool UpdateStudentPhone(string StuNum, string StuPhone)
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE StudentInformation SET StudentPhone = '" + StuPhone + "' WHERE StudentNumber = '" + StuNum + "'";
-                SqlCommand command = new SqlCommand(Query, con);
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
-                return true;
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show(sqlEx.Message);
-                return false;
-            }
-        }
-
-        public bool UpdateStudentAddress(string StuNum, string StuAddress)
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE StudentInformation SET StudentImage = '" + StuAddress + "' WHERE StudentNumber = '" + StuNum + "'";
+                string Query = "UPDATE StudentInformation SET (StudentFirstName = '" + StuName + "', StudentMiddleName = '" + StuMName + "', StudentLastName = '" + StuSurname + "', StudentImage = '" + StuImage + "', StudentDateOfBirth = '" + StuDOB + "'" +
+                    ", StudentGender = '" + StuGender + "', StudentPhone = '" + Phone + "', StudentAddress = '" + StuAddress + "') WHERE StudentNumber = '" + StuNum+ "'";
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
                 command.ExecuteNonQuery();

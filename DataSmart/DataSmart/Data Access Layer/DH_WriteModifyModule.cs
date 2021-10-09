@@ -34,40 +34,21 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        public bool UpdateModuleOnlineResources(string ModCode, string OnResources)
+        public bool UpdateModuleInformation(string ModCode, string ModDesc, string OnResources)
         {
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE ModuleInformation SET OnlineResources = '" + OnResources + "' WHERE ModuleCode = '" + ModCode + "'";
+                string Query = "UPDATE ModuleInformation SET (OnlineResources = '" + OnResources + "') WHERE ModuleCode = '" + ModCode + "'";
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
                 return true;
             }
-            catch (SqlException sqlEx)
+            catch (SqlException ex)
             {
-                MessageBox.Show(sqlEx.Message);
-                return false;
-            }
-        }
-
-        public bool UpdateModuleDescription(string ModCode, string ModDesc)
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE ModuleInformation SET ModuleDescription = '" + ModDesc + "' WHERE ModuleCode = '" + ModCode + "'";
-                SqlCommand command = new SqlCommand(Query, con);
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
-                return true;
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show(sqlEx.Message);
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }

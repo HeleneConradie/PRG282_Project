@@ -38,7 +38,7 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        public bool InsertStudentModule(string StuNum, StudentModule objStuMod)
+        public bool InsertStudentModule(string StuNum)
         {
             try
             {

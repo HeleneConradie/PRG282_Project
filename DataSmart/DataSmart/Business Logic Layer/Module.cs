@@ -76,9 +76,6 @@ namespace DataSmart.Business_Logic_Layer
 
         public List<Module> DisplayAll()
         {
-            Modules = readmod.ReadAll();
-
-
         }
     }
 }
