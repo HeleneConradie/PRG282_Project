@@ -10,7 +10,7 @@ namespace DataSmart.Data_Access_Layer
 {
     class DH_ReadLogin
     {
-        public List<string> ReadLogin()
+        public static List<string> ReadLogin()
         {
             try
             {
