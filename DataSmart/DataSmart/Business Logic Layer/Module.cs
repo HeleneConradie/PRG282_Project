@@ -44,22 +44,12 @@ namespace DataSmart.Business_Logic_Layer
             return "Oops! Something went wrong";
         }
 
-        public string UpdateDescription(string codeM, string Desc)
+        public string UpdateModules(string modID, string modName, string modDesc)
         {
-            bool Success = writemod.UpdateModuleDescription(codeM, Desc);
+            bool Success = writemod.UpdateModuleInformation(modID, modName, modDesc);
             if (Success == true)
             {
-                return "Module description has updated successfully!";
-            }
-            return "Oops! Something went wrong";
-        }
-
-        public string UpdateResources(string modC, string onR)
-        {
-            bool Success = writemod.UpdateModuleOnlineResources(modC, onR);
-            if (Success == true)
-            {
-                return "Online Resources has updated successfully!";
+                return "Module has been updated successfully!";
             }
             return "Oops! Something went wrong";
         }
