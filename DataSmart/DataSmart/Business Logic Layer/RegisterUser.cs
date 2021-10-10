@@ -9,11 +9,17 @@ namespace DataSmart.Business_Logic_Layer
 {
     class RegisterUser
     {
-        public bool Register(string UserName, string Password, string UserID, string Name, string Surname, string email, string Campus)
+        public string Register(string UserName, string Password, string UserID, string Name, string Surname, string email, string Campus)
         {
             string Login = UserName + "#" + Password;
             string Details = UserID + "#" + Name + "#" + Surname + "#" + email + "#" + Campus;
-            return DH_WriteTextFiles.WriteTextFiles(Login, Details);
+            bool Successful = DH_WriteTextFiles.WriteTextFiles(Login, Details);
+
+            if (Successful == true)
+            {
+                return "You have registered successfully";
+            }
+            return "OOPS! Something went wrong!";
         }
     }
 }

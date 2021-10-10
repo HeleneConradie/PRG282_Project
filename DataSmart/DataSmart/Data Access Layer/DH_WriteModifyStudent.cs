@@ -13,13 +13,13 @@ namespace DataSmart.Data_Access_Layer
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
-        public bool InsertStudent(string StuNum, string StuName, string StuSurname, Image StuImage, string StuDOB, string StuGender, string Phone, string StuAddress)
+        public bool InsertStudent(string StuNum, string StuName, string middleName, string StuSurname, Image StuImage, string StuDOB, string StuGender, string Phone, string StuAddress)
         {
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = string.Format(@"INSERT INTO StudentInformation(StudentNumber, StudentFirtsName, StudentLastName, StudentImage, StudentDateOfBirth, StudentGender, StudentPhone, StudentAddress) 
-                    Values ('" + StuNum + "', '" + StuName + "', '" + StuSurname + "', '" + StuImage + "', '" + StuDOB + "', '" + StuGender + "', '" + Phone + "', '" + StuAddress + "')");
+                string Query = string.Format(@"INSERT INTO StudentInformation(StudentNumber, StudentFirtsName, StudentMiddleName, StudentLastName, StudentImage, StudentDateOfBirth, StudentGender, StudentPhone, StudentAddress) 
+                    Values ('" + StuNum + "', '" + StuName + "', '" + middleName + "', '" + StuSurname + "', '" + StuImage + "', '" + StuDOB + "', '" + StuGender + "', '" + Phone + "', '" + StuAddress + "')");
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
                 command.ExecuteNonQuery();
@@ -33,12 +33,12 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        public bool UpdateStudent(string StuNum, string StuName, string StuMName, string StuSurname, Image StuImage, string StuDOB, string StuGender, string Phone, string StuAddress)
+        public bool UpdateStudent(string StuNum, string StuName, string StuMiddleName, string StuSurname, Image StuImage, string StuDOB, string StuGender, string Phone, string StuAddress)
         {
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE StudentInformation SET (StudentFirstName = '" + StuName + "', StudentMiddleName = '" + StuMName + "', StudentLastName = '" + StuSurname + "', StudentImage = '" + StuImage + "', StudentDateOfBirth = '" + StuDOB + "'" +
+                string Query = "UPDATE StudentInformation SET (StudentFirstName = '" + StuName + "', StudentMiddleName = '" + StuMiddleName + "', StudentLastName = '" + StuSurname + "', StudentImage = '" + StuImage + "', StudentDateOfBirth = '" + StuDOB + "'" +
                     ", StudentGender = '" + StuGender + "', StudentPhone = '" + Phone + "', StudentAddress = '" + StuAddress + "') WHERE StudentNumber = '" + StuNum+ "'";
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();

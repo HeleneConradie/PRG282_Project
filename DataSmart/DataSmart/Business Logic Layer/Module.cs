@@ -41,17 +41,17 @@ namespace DataSmart.Business_Logic_Layer
             {
                 return "Module added successfully!";
             }
-            return "Oops! Something went wrong";
+            return "OOPS! Something went wrong";
         }
 
-        public string UpdateModules(string modID, string modName, string modDesc)
+        public string UpdateModule(string modID, string modName, string modDesc)
         {
             bool Success = writemod.UpdateModuleInformation(modID, modName, modDesc);
             if (Success == true)
             {
                 return "Module has been updated successfully!";
             }
-            return "Oops! Something went wrong";
+            return "OOPS! Something went wrong";
         }
 
         public string ModDelete(string modulecode)
@@ -61,11 +61,26 @@ namespace DataSmart.Business_Logic_Layer
             {
                 return "Module has been deleted successfully!";
             }
-            return "Oops! Something went wrong";
+            return "OOPS! Something went wrong";
         }
 
         public List<Module> DisplayAll()
         {
+            Modules.AddRange(readmod.ReadAll());
+            return Modules;
         }
+
+        public List<Module> DisplaySearchedModule(string ModuleCode)
+        {
+            string FoundModule = readmod.ReadModule(ModuleCode);
+            if (FoundModule != null)
+            {
+                string[] ModuleContent = FoundModule.Split('#');
+                Modules.Add(new Module(ModuleContent[0], ModuleContent[1], ModuleContent[2], ModuleContent[3]));
+                return Modules;
+            }
+            return null;
+        }
+
     }
 }
