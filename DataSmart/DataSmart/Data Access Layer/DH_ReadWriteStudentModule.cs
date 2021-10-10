@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataSmart.Business_Logic_Layer;
 
 namespace DataSmart.Data_Access_Layer
 {
@@ -12,12 +13,12 @@ namespace DataSmart.Data_Access_Layer
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
-        public List<string> ReadAll(string StuNum)
+        public List<StudentModule> ReadAll(string stuNum)
         {
             try
             {
                 //Create list to display
-                List<string> AllModules = new List<string>();
+                List<StudentModule> AllModules = new List<StudentModule>();
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
                 string Query = "SELECT * FROM ModuleInformation";
                 SqlCommand cmd = new SqlCommand(Query, connection);
@@ -26,7 +27,7 @@ namespace DataSmart.Data_Access_Layer
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    AllModules.Add(StuNum + "," + dr.GetValue(0).ToString());
+                    AllModules.Add(new StudentModule(stuNum, dr.GetValue(0).ToString()));
                 }
                 connection.Close();
                 return AllModules;
