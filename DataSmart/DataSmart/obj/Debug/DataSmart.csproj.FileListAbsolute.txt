@@ -15,3 +15,4 @@ C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignm
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.csproj.CoreCompileInputs.cache
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.exe
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.pdb
+C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmModule.resources
