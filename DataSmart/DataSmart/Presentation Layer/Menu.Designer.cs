@@ -32,21 +32,21 @@ namespace DataSmart.Presentation_Layer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnModule = new System.Windows.Forms.RadioButton();
-            this.rbtnStudent = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbtnModify = new System.Windows.Forms.RadioButton();
-            this.rbtnAdd = new System.Windows.Forms.RadioButton();
-            this.rbtnSearch = new System.Windows.Forms.RadioButton();
-            this.rbtnViewAll = new System.Windows.Forms.RadioButton();
             this.btnContinue = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbtnViewAll = new System.Windows.Forms.RadioButton();
+            this.rbtnSearch = new System.Windows.Forms.RadioButton();
+            this.rbtnAdd = new System.Windows.Forms.RadioButton();
+            this.rbtnModify = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnStudent = new System.Windows.Forms.RadioButton();
+            this.rbtnModule = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -75,106 +75,6 @@ namespace DataSmart.Presentation_Layer
             this.panel1.Size = new System.Drawing.Size(421, 375);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(112, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbtnStudent);
-            this.groupBox1.Controls.Add(this.rbtnModule);
-            this.groupBox1.Location = new System.Drawing.Point(14, 158);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(172, 115);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbtnModule
-            // 
-            this.rbtnModule.AutoSize = true;
-            this.rbtnModule.Location = new System.Drawing.Point(6, 19);
-            this.rbtnModule.Name = "rbtnModule";
-            this.rbtnModule.Size = new System.Drawing.Size(60, 17);
-            this.rbtnModule.TabIndex = 0;
-            this.rbtnModule.TabStop = true;
-            this.rbtnModule.Text = "Module";
-            this.rbtnModule.UseVisualStyleBackColor = true;
-            this.rbtnModule.CheckedChanged += new System.EventHandler(this.rbtnModule_CheckedChanged);
-            // 
-            // rbtnStudent
-            // 
-            this.rbtnStudent.AutoSize = true;
-            this.rbtnStudent.Location = new System.Drawing.Point(6, 42);
-            this.rbtnStudent.Name = "rbtnStudent";
-            this.rbtnStudent.Size = new System.Drawing.Size(62, 17);
-            this.rbtnStudent.TabIndex = 1;
-            this.rbtnStudent.TabStop = true;
-            this.rbtnStudent.Text = "Student";
-            this.rbtnStudent.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.rbtnViewAll);
-            this.groupBox2.Controls.Add(this.rbtnSearch);
-            this.groupBox2.Controls.Add(this.rbtnAdd);
-            this.groupBox2.Controls.Add(this.rbtnModify);
-            this.groupBox2.Location = new System.Drawing.Point(222, 158);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(180, 115);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            // 
-            // rbtnModify
-            // 
-            this.rbtnModify.AutoSize = true;
-            this.rbtnModify.Location = new System.Drawing.Point(20, 19);
-            this.rbtnModify.Name = "rbtnModify";
-            this.rbtnModify.Size = new System.Drawing.Size(56, 17);
-            this.rbtnModify.TabIndex = 0;
-            this.rbtnModify.TabStop = true;
-            this.rbtnModify.Text = "Modify";
-            this.rbtnModify.UseVisualStyleBackColor = true;
-            // 
-            // rbtnAdd
-            // 
-            this.rbtnAdd.AutoSize = true;
-            this.rbtnAdd.Location = new System.Drawing.Point(20, 43);
-            this.rbtnAdd.Name = "rbtnAdd";
-            this.rbtnAdd.Size = new System.Drawing.Size(44, 17);
-            this.rbtnAdd.TabIndex = 1;
-            this.rbtnAdd.TabStop = true;
-            this.rbtnAdd.Text = "Add";
-            this.rbtnAdd.UseVisualStyleBackColor = true;
-            // 
-            // rbtnSearch
-            // 
-            this.rbtnSearch.AutoSize = true;
-            this.rbtnSearch.Location = new System.Drawing.Point(20, 65);
-            this.rbtnSearch.Name = "rbtnSearch";
-            this.rbtnSearch.Size = new System.Drawing.Size(59, 17);
-            this.rbtnSearch.TabIndex = 2;
-            this.rbtnSearch.TabStop = true;
-            this.rbtnSearch.Text = "Search";
-            this.rbtnSearch.UseVisualStyleBackColor = true;
-            // 
-            // rbtnViewAll
-            // 
-            this.rbtnViewAll.AutoSize = true;
-            this.rbtnViewAll.Location = new System.Drawing.Point(20, 89);
-            this.rbtnViewAll.Name = "rbtnViewAll";
-            this.rbtnViewAll.Size = new System.Drawing.Size(59, 17);
-            this.rbtnViewAll.TabIndex = 3;
-            this.rbtnViewAll.TabStop = true;
-            this.rbtnViewAll.Text = "ViewAll";
-            this.rbtnViewAll.UseVisualStyleBackColor = true;
-            // 
             // btnContinue
             // 
             this.btnContinue.BackColor = System.Drawing.Color.Transparent;
@@ -189,6 +89,106 @@ namespace DataSmart.Presentation_Layer
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.rbtnViewAll);
+            this.groupBox2.Controls.Add(this.rbtnSearch);
+            this.groupBox2.Controls.Add(this.rbtnAdd);
+            this.groupBox2.Controls.Add(this.rbtnModify);
+            this.groupBox2.Location = new System.Drawing.Point(222, 158);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(180, 115);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            // 
+            // rbtnViewAll
+            // 
+            this.rbtnViewAll.AutoSize = true;
+            this.rbtnViewAll.Location = new System.Drawing.Point(20, 89);
+            this.rbtnViewAll.Name = "rbtnViewAll";
+            this.rbtnViewAll.Size = new System.Drawing.Size(59, 17);
+            this.rbtnViewAll.TabIndex = 3;
+            this.rbtnViewAll.TabStop = true;
+            this.rbtnViewAll.Text = "ViewAll";
+            this.rbtnViewAll.UseVisualStyleBackColor = true;
+            // 
+            // rbtnSearch
+            // 
+            this.rbtnSearch.AutoSize = true;
+            this.rbtnSearch.Location = new System.Drawing.Point(20, 65);
+            this.rbtnSearch.Name = "rbtnSearch";
+            this.rbtnSearch.Size = new System.Drawing.Size(59, 17);
+            this.rbtnSearch.TabIndex = 2;
+            this.rbtnSearch.TabStop = true;
+            this.rbtnSearch.Text = "Search";
+            this.rbtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAdd
+            // 
+            this.rbtnAdd.AutoSize = true;
+            this.rbtnAdd.Location = new System.Drawing.Point(20, 43);
+            this.rbtnAdd.Name = "rbtnAdd";
+            this.rbtnAdd.Size = new System.Drawing.Size(44, 17);
+            this.rbtnAdd.TabIndex = 1;
+            this.rbtnAdd.TabStop = true;
+            this.rbtnAdd.Text = "Add";
+            this.rbtnAdd.UseVisualStyleBackColor = true;
+            // 
+            // rbtnModify
+            // 
+            this.rbtnModify.AutoSize = true;
+            this.rbtnModify.Location = new System.Drawing.Point(20, 19);
+            this.rbtnModify.Name = "rbtnModify";
+            this.rbtnModify.Size = new System.Drawing.Size(56, 17);
+            this.rbtnModify.TabIndex = 0;
+            this.rbtnModify.TabStop = true;
+            this.rbtnModify.Text = "Modify";
+            this.rbtnModify.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnStudent);
+            this.groupBox1.Controls.Add(this.rbtnModule);
+            this.groupBox1.Location = new System.Drawing.Point(14, 158);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(172, 115);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            // 
+            // rbtnStudent
+            // 
+            this.rbtnStudent.AutoSize = true;
+            this.rbtnStudent.Location = new System.Drawing.Point(6, 42);
+            this.rbtnStudent.Name = "rbtnStudent";
+            this.rbtnStudent.Size = new System.Drawing.Size(62, 17);
+            this.rbtnStudent.TabIndex = 1;
+            this.rbtnStudent.TabStop = true;
+            this.rbtnStudent.Text = "Student";
+            this.rbtnStudent.UseVisualStyleBackColor = true;
+            // 
+            // rbtnModule
+            // 
+            this.rbtnModule.AutoSize = true;
+            this.rbtnModule.Location = new System.Drawing.Point(6, 19);
+            this.rbtnModule.Name = "rbtnModule";
+            this.rbtnModule.Size = new System.Drawing.Size(60, 17);
+            this.rbtnModule.TabIndex = 0;
+            this.rbtnModule.TabStop = true;
+            this.rbtnModule.Text = "Module";
+            this.rbtnModule.UseVisualStyleBackColor = true;
+            this.rbtnModule.CheckedChanged += new System.EventHandler(this.rbtnModule_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(112, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 152);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,11 +199,11 @@ namespace DataSmart.Presentation_Layer
             this.Text = "Menu";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
