@@ -23,6 +23,7 @@ namespace DataSmart.Data_Access_Layer
             return StudImage;
         }
 
+        #region Read Methods
         public List<Student> ReadAll()
         {
             try
@@ -83,5 +84,7 @@ namespace DataSmart.Data_Access_Layer
                 return null;
             }
         }
+
+        #endregion
     }
 }
