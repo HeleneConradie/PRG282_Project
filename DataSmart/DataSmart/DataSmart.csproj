@@ -58,6 +58,12 @@
     <Compile Include="Data Access Layer\DH_Student.cs" />
     <Compile Include="Data Access Layer\DH_StudentModule.cs" />
     <Compile Include="Data Access Layer\DH_WriteTextFiles.cs" />
+    <Compile Include="Presentation Layer\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\Module.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Module.resx">
       <DependentUpon>Module.cs</DependentUpon>
     </EmbeddedResource>
