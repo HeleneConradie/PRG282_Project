@@ -9,8 +9,7 @@ namespace DataSmart.Business_Logic_Layer
 {
     class Module
     {
-        DH_WriteModifyModule writemod = new DH_WriteModifyModule();
-        DH_Module readmod = new DH_Module();
+        DH_Module module = new DH_Module();
         List<Module> Modules = new List<Module>();
 
         string ModuleCode;
@@ -36,7 +35,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string InsertMod(string code, string name, string description, string onlineres)
         {
-            bool Success = writemod.InsertModule(code, name, description, onlineres);
+            bool Success = module.InsertModule(code, name, description, onlineres);
             if (Success == true)
             {
                 return "Module added successfully!";
@@ -46,7 +45,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string UpdateModule(string modID, string modName, string modDesc)
         {
-            bool Success = writemod.UpdateModuleInformation(modID, modName, modDesc);
+            bool Success = module.UpdateModuleInformation(modID, modName, modDesc);
             if (Success == true)
             {
                 return "Module has been updated successfully!";
@@ -56,7 +55,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string ModDelete(string modulecode)
         {
-            bool Success = writemod.DeleteModule(modulecode);
+            bool Success = module.DeleteModule(modulecode);
             if (Success == true)
             {
                 return "Module has been deleted successfully!";
@@ -66,13 +65,13 @@ namespace DataSmart.Business_Logic_Layer
 
         public List<Module> DisplayAll()
         {
-            Modules.AddRange(readmod.ReadAll());
+            Modules.AddRange(module.ReadAll());
             return Modules;
         }
 
         public List<Module> DisplaySearchedModule(string ModuleCode)
         {
-            string FoundModule = readmod.ReadModule(ModuleCode);
+            string FoundModule = module.ReadModule(ModuleCode);
             if (FoundModule != null)
             {
                 string[] ModuleContent = FoundModule.Split('#');

@@ -11,8 +11,7 @@ namespace DataSmart.Business_Logic_Layer
 {
     class Student
     {
-        DH_WriteModifyStudent writestu = new DH_WriteModifyStudent();
-        DH_Student readstu = new DH_Student();
+        DH_Student student = new DH_Student();
         List<Student> Students = new List<Student>();
 
         string studentnumber;
@@ -52,7 +51,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string InsertStudentDetails(string num, string name, string middleName, string surname, Image img, string dob, string gender, string phone, string address)
         {
-            bool Success = writestu.InsertStudent(num, name, middleName, surname, img, dob, gender, phone, address);
+            bool Success = student.InsertStudent(num, name, middleName, surname, img, dob, gender, phone, address);
             if (Success == true)
             {
                 return "Student added successfully!";
@@ -62,7 +61,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string DeleteStudentDetails(string stuNum)
         { 
-            bool Success = writestu.DeleteStudent(stuNum);
+            bool Success = student.DeleteStudent(stuNum);
             if (Success == true)
             {
                 return "Student has been deleted successfully!";
@@ -72,7 +71,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public List<Student> DisplayAllStudents()
         {
-            Students.AddRange(readstu.ReadAll());
+            Students.AddRange(student.ReadAll());
             return Students;
         }
 
@@ -86,7 +85,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string DisplaySearchedStudent(string StudentID)
         {
-            string FoundStudent = readstu.ReadStudent(StudentID);
+            string FoundStudent = student.ReadStudent(StudentID);
             if (FoundStudent != null)
             {
                 object[] StudentContent = FoundStudent.Split('#');
@@ -101,7 +100,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public string UpdateStudentInformation(string StudNum, string StuName, string StuMiddleName, string StuSurname, Image StuImage, string DOB, string Gender, string Phone, string Address)
         {
-            bool Success = writestu.UpdateStudent(StudNum, StuName, StuMiddleName, StuSurname, StuImage, DOB, Gender, Phone, Address);
+            bool Success = student.UpdateStudent(StudNum, StuName, StuMiddleName, StuSurname, StuImage, DOB, Gender, Phone, Address);
             if (Success == true)
             {
                 return "Student has been updated successfully!";
