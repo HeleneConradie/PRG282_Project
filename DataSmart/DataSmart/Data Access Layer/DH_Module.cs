@@ -9,10 +9,70 @@ using System.Windows.Forms;
 
 namespace DataSmart.Data_Access_Layer
 {
-    class DH_WriteModifyModule
+    class DH_Module
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
+        List<Module> AllModules = new List<Module>();
 
+        #region Read Methods
+        public List<Module> ReadAll()
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(dbHandler.connect);
+                string Query = "SELECT * FROM ModuleInformation";
+                SqlCommand cmd = new SqlCommand(Query, connection);
+                SqlDataReader dr;
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    //Adding values to the list that are going to be displayed
+                    AllModules.Add(new Module(
+                        dr.GetValue(0).ToString(),
+                        dr.GetValue(1).ToString(),
+                        dr.GetValue(2).ToString(),
+                        dr.GetValue(3).ToString()
+                        ));
+                }
+                connection.Close();
+                return AllModules;
+            }
+            catch (SqlException SqlEx)
+            {
+                MessageBox.Show(SqlEx.Message);
+                return null;
+            }
+        }
+
+        public string ReadModule(string ModuleCode)
+        {
+            string value = "";
+            try
+            {
+                SqlConnection connection = new SqlConnection(dbHandler.connect);
+                string Query = "SELECT * FROM ModuleInformation WHERE ModuleCode ='" + ModuleCode + "'";
+                SqlCommand cmd = new SqlCommand(Query, connection);
+                SqlDataReader dr;
+                connection.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    value = dr.GetValue(0) + "#" + dr.GetValue(1) + "#" + dr.GetValue(2) + "#" + dr.GetValue(3);
+                }
+                connection.Close();
+                return value;
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region Insert Method
         public bool InsertModule(string modcode, string modname, string moddesc, string onres)
         {
             try
@@ -33,6 +93,9 @@ namespace DataSmart.Data_Access_Layer
                 return false;
             }
         }
+        #endregion
+
+        #region Update Method
 
         public bool UpdateModuleInformation(string ModCode, string ModDesc, string OnResources)
         {
@@ -52,7 +115,9 @@ namespace DataSmart.Data_Access_Layer
                 return false;
             }
         }
+        #endregion
 
+        #region Delete Method
         public bool DeleteModule(string ModuleCode)
         {
             try
@@ -71,5 +136,6 @@ namespace DataSmart.Data_Access_Layer
                 return false;
             }
         }
+        #endregion
     }
 }

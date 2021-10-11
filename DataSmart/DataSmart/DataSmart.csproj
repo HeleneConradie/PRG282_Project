@@ -54,11 +54,9 @@
     <Compile Include="Business Logic Layer\StudentModule.cs" />
     <Compile Include="Data Access Layer\DH_DatabaseConnection.cs" />
     <Compile Include="Data Access Layer\DH_ReadLogin.cs" />
-    <Compile Include="Data Access Layer\DH_ReadModule.cs" />
-    <Compile Include="Data Access Layer\DH_ReadStudent.cs" />
-    <Compile Include="Data Access Layer\DH_ReadWriteStudentModule.cs" />
-    <Compile Include="Data Access Layer\DH_WriteModifyModule.cs" />
-    <Compile Include="Data Access Layer\DH_WriteModifyStudent.cs" />
+    <Compile Include="Data Access Layer\DH_Module.cs" />
+    <Compile Include="Data Access Layer\DH_Student.cs" />
+    <Compile Include="Data Access Layer\DH_StudentModule.cs" />
     <Compile Include="Data Access Layer\DH_WriteTextFiles.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -10,7 +10,7 @@ namespace DataSmart.Business_Logic_Layer
     class Module
     {
         DH_WriteModifyModule writemod = new DH_WriteModifyModule();
-        DH_ReadModule readmod = new DH_ReadModule();
+        DH_Module readmod = new DH_Module();
         List<Module> Modules = new List<Module>();
 
         string ModuleCode;

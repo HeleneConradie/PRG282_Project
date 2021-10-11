@@ -9,10 +9,11 @@ using DataSmart.Business_Logic_Layer;
 
 namespace DataSmart.Data_Access_Layer
 {
-    class DH_ReadWriteStudentModule
+    class DH_StudentModule
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
+        #region Read Method
         public List<StudentModule> ReadAll(string stuNum)
         {
             try
@@ -38,7 +39,9 @@ namespace DataSmart.Data_Access_Layer
                 return null;
             }
         }
+        #endregion
 
+        #region Insert Method
         public bool InsertStudentModule(string StuNum)
         {
             try
@@ -75,5 +78,6 @@ namespace DataSmart.Data_Access_Layer
                 return false;
             }
         }
+        #endregion
     }
 }

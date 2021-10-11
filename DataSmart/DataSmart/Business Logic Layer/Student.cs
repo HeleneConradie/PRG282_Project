@@ -12,7 +12,7 @@ namespace DataSmart.Business_Logic_Layer
     class Student
     {
         DH_WriteModifyStudent writestu = new DH_WriteModifyStudent();
-        DH_ReadStudent readstu = new DH_ReadStudent();
+        DH_Student readstu = new DH_Student();
         List<Student> Students = new List<Student>();
 
         string studentnumber;
