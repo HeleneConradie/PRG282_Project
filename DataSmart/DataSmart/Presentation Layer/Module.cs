@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataSmart
+namespace DataSmart.Presentation_Layer
 {
-    public partial class Form1 : Form
+    public partial class frmModule : Form
     {
-        public Form1()
+        public frmModule()
         {
             InitializeComponent();
         }
