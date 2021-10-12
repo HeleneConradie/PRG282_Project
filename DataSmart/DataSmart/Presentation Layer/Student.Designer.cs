@@ -34,25 +34,6 @@ namespace DataSmart.Presentation_Layer
             this.btnStudentUpdate = new System.Windows.Forms.Button();
             this.btnStudentDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbLogoModifyStudent = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblStudentNumber2 = new System.Windows.Forms.Label();
-            this.lblAddress2 = new System.Windows.Forms.Label();
-            this.lblPhoneNumber2 = new System.Windows.Forms.Label();
-            this.llblGender2 = new System.Windows.Forms.Label();
-            this.lblDOB2 = new System.Windows.Forms.Label();
-            this.lblStudentLastName2 = new System.Windows.Forms.Label();
-            this.lblStudentMName2 = new System.Windows.Forms.Label();
-            this.lblStudentFName2 = new System.Windows.Forms.Label();
-            this.tbStudentFirstName2 = new System.Windows.Forms.TextBox();
-            this.tbMiddleName2 = new System.Windows.Forms.TextBox();
-            this.tbLastName2 = new System.Windows.Forms.TextBox();
-            this.tbStudentNumber2 = new System.Windows.Forms.TextBox();
-            this.tbPhoneNumber2 = new System.Windows.Forms.TextBox();
-            this.tbAddress2 = new System.Windows.Forms.TextBox();
-            this.cbGender2 = new System.Windows.Forms.ComboBox();
-            this.dtpDOB2 = new System.Windows.Forms.DateTimePicker();
-            this.lblStudentImage2 = new System.Windows.Forms.Label();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
             this.lblStudentImage = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
@@ -73,10 +54,31 @@ namespace DataSmart.Presentation_Layer
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.lblAddStudentHeading = new System.Windows.Forms.Label();
             this.pbLogoAddStudent = new System.Windows.Forms.PictureBox();
+            this.lblStudentImage2 = new System.Windows.Forms.Label();
+            this.dtpDOB2 = new System.Windows.Forms.DateTimePicker();
+            this.cbGender2 = new System.Windows.Forms.ComboBox();
+            this.tbAddress2 = new System.Windows.Forms.TextBox();
+            this.tbPhoneNumber2 = new System.Windows.Forms.TextBox();
+            this.tbStudentNumber2 = new System.Windows.Forms.TextBox();
+            this.tbLastName2 = new System.Windows.Forms.TextBox();
+            this.tbMiddleName2 = new System.Windows.Forms.TextBox();
+            this.tbStudentFirstName2 = new System.Windows.Forms.TextBox();
+            this.lblStudentFName2 = new System.Windows.Forms.Label();
+            this.lblStudentMName2 = new System.Windows.Forms.Label();
+            this.lblStudentLastName2 = new System.Windows.Forms.Label();
+            this.lblDOB2 = new System.Windows.Forms.Label();
+            this.llblGender2 = new System.Windows.Forms.Label();
+            this.lblPhoneNumber2 = new System.Windows.Forms.Label();
+            this.lblAddress2 = new System.Windows.Forms.Label();
+            this.lblStudentNumber2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pbLogoModifyStudent = new System.Windows.Forms.PictureBox();
+            this.btnChooseImage = new System.Windows.Forms.Button();
+            this.btnChooseImage2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).BeginInit();
             this.pnlAddStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoAddStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStudentBack
@@ -151,196 +153,17 @@ namespace DataSmart.Presentation_Layer
             this.panel1.Controls.Add(this.lblStudentNumber2);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.pbLogoModifyStudent);
+            this.panel1.Controls.Add(this.btnChooseImage2);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(746, 407);
             this.panel1.TabIndex = 25;
             // 
-            // pbLogoModifyStudent
-            // 
-            this.pbLogoModifyStudent.Image = global::DataSmart.Properties.Resources.DataSmart_Logo;
-            this.pbLogoModifyStudent.Location = new System.Drawing.Point(0, 0);
-            this.pbLogoModifyStudent.Name = "pbLogoModifyStudent";
-            this.pbLogoModifyStudent.Size = new System.Drawing.Size(159, 121);
-            this.pbLogoModifyStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoModifyStudent.TabIndex = 0;
-            this.pbLogoModifyStudent.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(334, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 24);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Modify Student";
-            // 
-            // lblStudentNumber2
-            // 
-            this.lblStudentNumber2.AutoSize = true;
-            this.lblStudentNumber2.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentNumber2.Location = new System.Drawing.Point(271, 60);
-            this.lblStudentNumber2.Name = "lblStudentNumber2";
-            this.lblStudentNumber2.Size = new System.Drawing.Size(107, 16);
-            this.lblStudentNumber2.TabIndex = 6;
-            this.lblStudentNumber2.Text = "Student Number:";
-            // 
-            // lblAddress2
-            // 
-            this.lblAddress2.AutoSize = true;
-            this.lblAddress2.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress2.Location = new System.Drawing.Point(271, 369);
-            this.lblAddress2.Name = "lblAddress2";
-            this.lblAddress2.Size = new System.Drawing.Size(62, 16);
-            this.lblAddress2.TabIndex = 7;
-            this.lblAddress2.Text = "Address:";
-            // 
-            // lblPhoneNumber2
-            // 
-            this.lblPhoneNumber2.AutoSize = true;
-            this.lblPhoneNumber2.BackColor = System.Drawing.Color.Transparent;
-            this.lblPhoneNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber2.Location = new System.Drawing.Point(271, 330);
-            this.lblPhoneNumber2.Name = "lblPhoneNumber2";
-            this.lblPhoneNumber2.Size = new System.Drawing.Size(101, 16);
-            this.lblPhoneNumber2.TabIndex = 8;
-            this.lblPhoneNumber2.Text = "Phone Number:";
-            // 
-            // llblGender2
-            // 
-            this.llblGender2.AutoSize = true;
-            this.llblGender2.BackColor = System.Drawing.Color.Transparent;
-            this.llblGender2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblGender2.Location = new System.Drawing.Point(271, 294);
-            this.llblGender2.Name = "llblGender2";
-            this.llblGender2.Size = new System.Drawing.Size(56, 16);
-            this.llblGender2.TabIndex = 9;
-            this.llblGender2.Text = "Gender:";
-            // 
-            // lblDOB2
-            // 
-            this.lblDOB2.AutoSize = true;
-            this.lblDOB2.BackColor = System.Drawing.Color.Transparent;
-            this.lblDOB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOB2.Location = new System.Drawing.Point(271, 255);
-            this.lblDOB2.Name = "lblDOB2";
-            this.lblDOB2.Size = new System.Drawing.Size(85, 16);
-            this.lblDOB2.TabIndex = 10;
-            this.lblDOB2.Text = "Date Of Birth:";
-            // 
-            // lblStudentLastName2
-            // 
-            this.lblStudentLastName2.AutoSize = true;
-            this.lblStudentLastName2.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentLastName2.Location = new System.Drawing.Point(271, 171);
-            this.lblStudentLastName2.Name = "lblStudentLastName2";
-            this.lblStudentLastName2.Size = new System.Drawing.Size(124, 16);
-            this.lblStudentLastName2.TabIndex = 11;
-            this.lblStudentLastName2.Text = "Student Last Name:";
-            // 
-            // lblStudentMName2
-            // 
-            this.lblStudentMName2.AutoSize = true;
-            this.lblStudentMName2.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentMName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentMName2.Location = new System.Drawing.Point(271, 132);
-            this.lblStudentMName2.Name = "lblStudentMName2";
-            this.lblStudentMName2.Size = new System.Drawing.Size(140, 16);
-            this.lblStudentMName2.TabIndex = 12;
-            this.lblStudentMName2.Text = "Student Middle Name:";
-            // 
-            // lblStudentFName2
-            // 
-            this.lblStudentFName2.AutoSize = true;
-            this.lblStudentFName2.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentFName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentFName2.Location = new System.Drawing.Point(271, 96);
-            this.lblStudentFName2.Name = "lblStudentFName2";
-            this.lblStudentFName2.Size = new System.Drawing.Size(124, 16);
-            this.lblStudentFName2.TabIndex = 13;
-            this.lblStudentFName2.Text = "Student First Name:";
-            // 
-            // tbStudentFirstName2
-            // 
-            this.tbStudentFirstName2.Location = new System.Drawing.Point(432, 92);
-            this.tbStudentFirstName2.Name = "tbStudentFirstName2";
-            this.tbStudentFirstName2.Size = new System.Drawing.Size(242, 20);
-            this.tbStudentFirstName2.TabIndex = 14;
-            // 
-            // tbMiddleName2
-            // 
-            this.tbMiddleName2.Location = new System.Drawing.Point(432, 128);
-            this.tbMiddleName2.Name = "tbMiddleName2";
-            this.tbMiddleName2.Size = new System.Drawing.Size(242, 20);
-            this.tbMiddleName2.TabIndex = 15;
-            // 
-            // tbLastName2
-            // 
-            this.tbLastName2.Location = new System.Drawing.Point(432, 170);
-            this.tbLastName2.Name = "tbLastName2";
-            this.tbLastName2.Size = new System.Drawing.Size(242, 20);
-            this.tbLastName2.TabIndex = 16;
-            // 
-            // tbStudentNumber2
-            // 
-            this.tbStudentNumber2.Location = new System.Drawing.Point(432, 56);
-            this.tbStudentNumber2.Name = "tbStudentNumber2";
-            this.tbStudentNumber2.Size = new System.Drawing.Size(242, 20);
-            this.tbStudentNumber2.TabIndex = 17;
-            // 
-            // tbPhoneNumber2
-            // 
-            this.tbPhoneNumber2.Location = new System.Drawing.Point(432, 326);
-            this.tbPhoneNumber2.Name = "tbPhoneNumber2";
-            this.tbPhoneNumber2.Size = new System.Drawing.Size(242, 20);
-            this.tbPhoneNumber2.TabIndex = 18;
-            // 
-            // tbAddress2
-            // 
-            this.tbAddress2.Location = new System.Drawing.Point(432, 369);
-            this.tbAddress2.Name = "tbAddress2";
-            this.tbAddress2.Size = new System.Drawing.Size(242, 20);
-            this.tbAddress2.TabIndex = 19;
-            // 
-            // cbGender2
-            // 
-            this.cbGender2.FormattingEnabled = true;
-            this.cbGender2.Items.AddRange(new object[] {
-            "Female",
-            "Male",
-            "Other"});
-            this.cbGender2.Location = new System.Drawing.Point(432, 288);
-            this.cbGender2.Name = "cbGender2";
-            this.cbGender2.Size = new System.Drawing.Size(148, 21);
-            this.cbGender2.TabIndex = 20;
-            // 
-            // dtpDOB2
-            // 
-            this.dtpDOB2.Location = new System.Drawing.Point(432, 250);
-            this.dtpDOB2.Name = "dtpDOB2";
-            this.dtpDOB2.Size = new System.Drawing.Size(200, 20);
-            this.dtpDOB2.TabIndex = 21;
-            // 
-            // lblStudentImage2
-            // 
-            this.lblStudentImage2.AutoSize = true;
-            this.lblStudentImage2.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentImage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentImage2.Location = new System.Drawing.Point(271, 214);
-            this.lblStudentImage2.Name = "lblStudentImage2";
-            this.lblStudentImage2.Size = new System.Drawing.Size(97, 16);
-            this.lblStudentImage2.TabIndex = 22;
-            this.lblStudentImage2.Text = "Student Image:";
-            // 
             // pnlAddStudent
             // 
             this.pnlAddStudent.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlAddStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlAddStudent.Controls.Add(this.btnChooseImage);
             this.pnlAddStudent.Controls.Add(this.lblStudentImage);
             this.pnlAddStudent.Controls.Add(this.dtpDOB);
             this.pnlAddStudent.Controls.Add(this.cbGender);
@@ -360,7 +183,7 @@ namespace DataSmart.Presentation_Layer
             this.pnlAddStudent.Controls.Add(this.lblStudentNumber);
             this.pnlAddStudent.Controls.Add(this.lblAddStudentHeading);
             this.pnlAddStudent.Controls.Add(this.pbLogoAddStudent);
-            this.pnlAddStudent.Location = new System.Drawing.Point(0, 1);
+            this.pnlAddStudent.Location = new System.Drawing.Point(1, 0);
             this.pnlAddStudent.Name = "pnlAddStudent";
             this.pnlAddStudent.Size = new System.Drawing.Size(746, 407);
             this.pnlAddStudent.TabIndex = 28;
@@ -546,6 +369,211 @@ namespace DataSmart.Presentation_Layer
             this.pbLogoAddStudent.TabIndex = 0;
             this.pbLogoAddStudent.TabStop = false;
             // 
+            // lblStudentImage2
+            // 
+            this.lblStudentImage2.AutoSize = true;
+            this.lblStudentImage2.BackColor = System.Drawing.Color.Transparent;
+            this.lblStudentImage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentImage2.Location = new System.Drawing.Point(271, 214);
+            this.lblStudentImage2.Name = "lblStudentImage2";
+            this.lblStudentImage2.Size = new System.Drawing.Size(97, 16);
+            this.lblStudentImage2.TabIndex = 22;
+            this.lblStudentImage2.Text = "Student Image:";
+            // 
+            // dtpDOB2
+            // 
+            this.dtpDOB2.Location = new System.Drawing.Point(432, 250);
+            this.dtpDOB2.Name = "dtpDOB2";
+            this.dtpDOB2.Size = new System.Drawing.Size(200, 20);
+            this.dtpDOB2.TabIndex = 21;
+            // 
+            // cbGender2
+            // 
+            this.cbGender2.FormattingEnabled = true;
+            this.cbGender2.Items.AddRange(new object[] {
+            "Female",
+            "Male",
+            "Other"});
+            this.cbGender2.Location = new System.Drawing.Point(432, 288);
+            this.cbGender2.Name = "cbGender2";
+            this.cbGender2.Size = new System.Drawing.Size(148, 21);
+            this.cbGender2.TabIndex = 20;
+            // 
+            // tbAddress2
+            // 
+            this.tbAddress2.Location = new System.Drawing.Point(432, 369);
+            this.tbAddress2.Name = "tbAddress2";
+            this.tbAddress2.Size = new System.Drawing.Size(242, 20);
+            this.tbAddress2.TabIndex = 19;
+            // 
+            // tbPhoneNumber2
+            // 
+            this.tbPhoneNumber2.Location = new System.Drawing.Point(432, 326);
+            this.tbPhoneNumber2.Name = "tbPhoneNumber2";
+            this.tbPhoneNumber2.Size = new System.Drawing.Size(242, 20);
+            this.tbPhoneNumber2.TabIndex = 18;
+            // 
+            // tbStudentNumber2
+            // 
+            this.tbStudentNumber2.Location = new System.Drawing.Point(432, 56);
+            this.tbStudentNumber2.Name = "tbStudentNumber2";
+            this.tbStudentNumber2.Size = new System.Drawing.Size(242, 20);
+            this.tbStudentNumber2.TabIndex = 17;
+            // 
+            // tbLastName2
+            // 
+            this.tbLastName2.Location = new System.Drawing.Point(432, 170);
+            this.tbLastName2.Name = "tbLastName2";
+            this.tbLastName2.Size = new System.Drawing.Size(242, 20);
+            this.tbLastName2.TabIndex = 16;
+            // 
+            // tbMiddleName2
+            // 
+            this.tbMiddleName2.Location = new System.Drawing.Point(432, 128);
+            this.tbMiddleName2.Name = "tbMiddleName2";
+            this.tbMiddleName2.Size = new System.Drawing.Size(242, 20);
+            this.tbMiddleName2.TabIndex = 15;
+            // 
+            // tbStudentFirstName2
+            // 
+            this.tbStudentFirstName2.Location = new System.Drawing.Point(432, 92);
+            this.tbStudentFirstName2.Name = "tbStudentFirstName2";
+            this.tbStudentFirstName2.Size = new System.Drawing.Size(242, 20);
+            this.tbStudentFirstName2.TabIndex = 14;
+            // 
+            // lblStudentFName2
+            // 
+            this.lblStudentFName2.AutoSize = true;
+            this.lblStudentFName2.BackColor = System.Drawing.Color.Transparent;
+            this.lblStudentFName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentFName2.Location = new System.Drawing.Point(271, 96);
+            this.lblStudentFName2.Name = "lblStudentFName2";
+            this.lblStudentFName2.Size = new System.Drawing.Size(124, 16);
+            this.lblStudentFName2.TabIndex = 13;
+            this.lblStudentFName2.Text = "Student First Name:";
+            // 
+            // lblStudentMName2
+            // 
+            this.lblStudentMName2.AutoSize = true;
+            this.lblStudentMName2.BackColor = System.Drawing.Color.Transparent;
+            this.lblStudentMName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentMName2.Location = new System.Drawing.Point(271, 132);
+            this.lblStudentMName2.Name = "lblStudentMName2";
+            this.lblStudentMName2.Size = new System.Drawing.Size(140, 16);
+            this.lblStudentMName2.TabIndex = 12;
+            this.lblStudentMName2.Text = "Student Middle Name:";
+            // 
+            // lblStudentLastName2
+            // 
+            this.lblStudentLastName2.AutoSize = true;
+            this.lblStudentLastName2.BackColor = System.Drawing.Color.Transparent;
+            this.lblStudentLastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentLastName2.Location = new System.Drawing.Point(271, 171);
+            this.lblStudentLastName2.Name = "lblStudentLastName2";
+            this.lblStudentLastName2.Size = new System.Drawing.Size(124, 16);
+            this.lblStudentLastName2.TabIndex = 11;
+            this.lblStudentLastName2.Text = "Student Last Name:";
+            // 
+            // lblDOB2
+            // 
+            this.lblDOB2.AutoSize = true;
+            this.lblDOB2.BackColor = System.Drawing.Color.Transparent;
+            this.lblDOB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDOB2.Location = new System.Drawing.Point(271, 255);
+            this.lblDOB2.Name = "lblDOB2";
+            this.lblDOB2.Size = new System.Drawing.Size(85, 16);
+            this.lblDOB2.TabIndex = 10;
+            this.lblDOB2.Text = "Date Of Birth:";
+            // 
+            // llblGender2
+            // 
+            this.llblGender2.AutoSize = true;
+            this.llblGender2.BackColor = System.Drawing.Color.Transparent;
+            this.llblGender2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblGender2.Location = new System.Drawing.Point(271, 294);
+            this.llblGender2.Name = "llblGender2";
+            this.llblGender2.Size = new System.Drawing.Size(56, 16);
+            this.llblGender2.TabIndex = 9;
+            this.llblGender2.Text = "Gender:";
+            // 
+            // lblPhoneNumber2
+            // 
+            this.lblPhoneNumber2.AutoSize = true;
+            this.lblPhoneNumber2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber2.Location = new System.Drawing.Point(271, 330);
+            this.lblPhoneNumber2.Name = "lblPhoneNumber2";
+            this.lblPhoneNumber2.Size = new System.Drawing.Size(101, 16);
+            this.lblPhoneNumber2.TabIndex = 8;
+            this.lblPhoneNumber2.Text = "Phone Number:";
+            // 
+            // lblAddress2
+            // 
+            this.lblAddress2.AutoSize = true;
+            this.lblAddress2.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress2.Location = new System.Drawing.Point(271, 369);
+            this.lblAddress2.Name = "lblAddress2";
+            this.lblAddress2.Size = new System.Drawing.Size(62, 16);
+            this.lblAddress2.TabIndex = 7;
+            this.lblAddress2.Text = "Address:";
+            // 
+            // lblStudentNumber2
+            // 
+            this.lblStudentNumber2.AutoSize = true;
+            this.lblStudentNumber2.BackColor = System.Drawing.Color.Transparent;
+            this.lblStudentNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentNumber2.Location = new System.Drawing.Point(271, 60);
+            this.lblStudentNumber2.Name = "lblStudentNumber2";
+            this.lblStudentNumber2.Size = new System.Drawing.Size(107, 16);
+            this.lblStudentNumber2.TabIndex = 6;
+            this.lblStudentNumber2.Text = "Student Number:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(334, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 24);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Modify Student";
+            // 
+            // pbLogoModifyStudent
+            // 
+            this.pbLogoModifyStudent.Image = global::DataSmart.Properties.Resources.DataSmart_Logo;
+            this.pbLogoModifyStudent.Location = new System.Drawing.Point(0, 0);
+            this.pbLogoModifyStudent.Name = "pbLogoModifyStudent";
+            this.pbLogoModifyStudent.Size = new System.Drawing.Size(159, 121);
+            this.pbLogoModifyStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoModifyStudent.TabIndex = 0;
+            this.pbLogoModifyStudent.TabStop = false;
+            // 
+            // btnChooseImage
+            // 
+            this.btnChooseImage.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseImage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnChooseImage.Location = new System.Drawing.Point(432, 214);
+            this.btnChooseImage.Name = "btnChooseImage";
+            this.btnChooseImage.Size = new System.Drawing.Size(148, 23);
+            this.btnChooseImage.TabIndex = 23;
+            this.btnChooseImage.Text = "Choose Image";
+            this.btnChooseImage.UseVisualStyleBackColor = false;
+            // 
+            // btnChooseImage2
+            // 
+            this.btnChooseImage2.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseImage2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnChooseImage2.Location = new System.Drawing.Point(432, 214);
+            this.btnChooseImage2.Name = "btnChooseImage2";
+            this.btnChooseImage2.Size = new System.Drawing.Size(148, 23);
+            this.btnChooseImage2.TabIndex = 29;
+            this.btnChooseImage2.Text = "Choose Image";
+            this.btnChooseImage2.UseVisualStyleBackColor = false;
+            // 
             // frmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,10 +588,10 @@ namespace DataSmart.Presentation_Layer
             this.Text = "Student";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).EndInit();
             this.pnlAddStudent.ResumeLayout(false);
             this.pnlAddStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoAddStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -613,5 +641,7 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Label lblStudentNumber2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pbLogoModifyStudent;
+        private System.Windows.Forms.Button btnChooseImage2;
+        private System.Windows.Forms.Button btnChooseImage;
     }
 }
