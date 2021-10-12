@@ -11,14 +11,15 @@ namespace DataSmart.Business_Logic_Layer
 {
     class RegisterUser
     {
-        public static int Register(string UserName, string Password, string ConPass,string Name, string Surname, string email, int Camp)
+        public static int Register(string UserName, string Password, string ConPass, string Name, string Surname, string email, int Camp)
         {
-            int Val = Validation(Password, ConPass,Name, Surname, email);
+            int Val = Validation(Password, ConPass, Name, Surname, email);
             if (Val != -1)
             {
                 return Val;
             }
 
+            //Finding the campus as the value comes from a combo box
             string Campus = "";
             switch (Camp)
             {
@@ -33,18 +34,21 @@ namespace DataSmart.Business_Logic_Layer
                     break;
             }
 
-            string Login = UserName + "#" + Password;
-            string Details = UserID + "#" + Name + "#" + Surname + "#" + email + "#" + Campus;
-            bool Successful = DH_WriteTextFiles.WriteTextFiles(Login, Details);
+            //Getting latest user and incrementing UserID
+            List<string> Users = new List<string>();
+            string[] latest = Users[0].Split('#');
+            int UserID = int.Parse(latest[0]) + 1;
 
-            if (Successful == true)
+            string Login = UserName + "#" + Password;
+            string Details = UserID.ToString() + "#" + Name + "#" + Surname + "#" + email + "#" + Campus;
+            if (DH_WriteTextFiles.WriteTextFiles(Login, Details))
             {
                 return -1;
             }
             return -2;
         }
 
-        public static int Validation(string Password, string ConPass ,string Name, string Surname, string email)
+        public static int Validation(string Password, string ConPass, string Name, string Surname, string email)
         {
             var hasNumber = new Regex(@"[0-9]+");
             var hasUpperChar = new Regex(@"[A-Z]+");
@@ -56,7 +60,7 @@ namespace DataSmart.Business_Logic_Layer
                 return 0;
             }
 
-            if (ConPass.Equals(null)||(Password!=ConPass))
+            if (ConPass.Equals(null) || (Password != ConPass))
             {
                 return 1;
             }
@@ -70,7 +74,7 @@ namespace DataSmart.Business_Logic_Layer
             {
                 return 3;
             }
-
+            //check if email is in a valid format
             try
             {
                 MailAddress m = new MailAddress(email);
