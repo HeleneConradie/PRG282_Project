@@ -40,9 +40,11 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pbLogoLogin = new System.Windows.Forms.PictureBox();
+            this.pbShowPassword = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -61,6 +63,7 @@ namespace DataSmart.Presentation_Layer
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pbShowPassword);
             this.panel1.Controls.Add(this.btnExitLogin);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblUsername);
@@ -165,6 +168,16 @@ namespace DataSmart.Presentation_Layer
             this.pbLogoLogin.TabIndex = 0;
             this.pbLogoLogin.TabStop = false;
             // 
+            // pbShowPassword
+            // 
+            this.pbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowPassword.Location = new System.Drawing.Point(308, 207);
+            this.pbShowPassword.Name = "pbShowPassword";
+            this.pbShowPassword.Size = new System.Drawing.Size(22, 20);
+            this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowPassword.TabIndex = 9;
+            this.pbShowPassword.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +190,7 @@ namespace DataSmart.Presentation_Layer
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +207,6 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnExitLogin;
+        private System.Windows.Forms.PictureBox pbShowPassword;
     }
 }

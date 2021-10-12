@@ -40,7 +40,6 @@ namespace DataSmart.Presentation_Layer
             this.lblUsername = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.lblCampus = new System.Windows.Forms.Label();
-            this.tbCampus = new System.Windows.Forms.TextBox();
             this.lbllblEmail = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@ namespace DataSmart.Presentation_Layer
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblRegisterHeading = new System.Windows.Forms.Label();
+            this.cbCampus = new System.Windows.Forms.ComboBox();
             this.pnlRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,7 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister.TabIndex = 11;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnRegBack
             // 
@@ -80,6 +81,7 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pnlRegister.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlRegister.Controls.Add(this.cbCampus);
             this.pnlRegister.Controls.Add(this.pbLogoReigster);
             this.pnlRegister.Controls.Add(this.lblConPass);
             this.pnlRegister.Controls.Add(this.tbConPass);
@@ -88,7 +90,6 @@ namespace DataSmart.Presentation_Layer
             this.pnlRegister.Controls.Add(this.lblUsername);
             this.pnlRegister.Controls.Add(this.tbUsername);
             this.pnlRegister.Controls.Add(this.lblCampus);
-            this.pnlRegister.Controls.Add(this.tbCampus);
             this.pnlRegister.Controls.Add(this.lbllblEmail);
             this.pnlRegister.Controls.Add(this.lblSurname);
             this.pnlRegister.Controls.Add(this.lblName);
@@ -162,6 +163,7 @@ namespace DataSmart.Presentation_Layer
             // 
             this.tbUsername.Location = new System.Drawing.Point(410, 146);
             this.tbUsername.Name = "tbUsername";
+            this.tbUsername.ReadOnly = true;
             this.tbUsername.Size = new System.Drawing.Size(153, 20);
             this.tbUsername.TabIndex = 11;
             // 
@@ -175,13 +177,6 @@ namespace DataSmart.Presentation_Layer
             this.lblCampus.Size = new System.Drawing.Size(61, 16);
             this.lblCampus.TabIndex = 9;
             this.lblCampus.Text = "Campus:";
-            // 
-            // tbCampus
-            // 
-            this.tbCampus.Location = new System.Drawing.Point(410, 120);
-            this.tbCampus.Name = "tbCampus";
-            this.tbCampus.Size = new System.Drawing.Size(153, 20);
-            this.tbCampus.TabIndex = 8;
             // 
             // lbllblEmail
             // 
@@ -248,6 +243,18 @@ namespace DataSmart.Presentation_Layer
             this.lblRegisterHeading.TabIndex = 0;
             this.lblRegisterHeading.Text = "Register";
             // 
+            // cbCampus
+            // 
+            this.cbCampus.FormattingEnabled = true;
+            this.cbCampus.Items.AddRange(new object[] {
+            "PTA",
+            "PE",
+            "KP"});
+            this.cbCampus.Location = new System.Drawing.Point(409, 120);
+            this.cbCampus.Name = "cbCampus";
+            this.cbCampus.Size = new System.Drawing.Size(154, 21);
+            this.cbCampus.TabIndex = 18;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,7 +285,6 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lblCampus;
-        private System.Windows.Forms.TextBox tbCampus;
         private System.Windows.Forms.Label lbllblEmail;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblName;
@@ -286,5 +292,6 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.TextBox tbSurname;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblRegisterHeading;
+        private System.Windows.Forms.ComboBox cbCampus;
     }
 }
