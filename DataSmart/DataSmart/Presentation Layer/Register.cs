@@ -13,6 +13,7 @@ namespace DataSmart.Presentation_Layer
 {
     public partial class frmRegister : Form
     {
+        frmLogin login = new frmLogin();
         public frmRegister()
         {
             InitializeComponent();
@@ -49,9 +50,15 @@ namespace DataSmart.Presentation_Layer
                     MessageBox.Show("Surname is invalid!");
                     break;
                 case 4:
-                    MessageBox.Show("Emial is invalid!");
+                    MessageBox.Show("Email is invalid!");
                     break;
             }
+        }
+
+        private void btnRegBack_Click(object sender, EventArgs e)
+        {
+            login.Show();
+            this.Hide();
         }
     }
 }

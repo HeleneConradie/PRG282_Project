@@ -32,6 +32,7 @@ namespace DataSmart.Presentation_Layer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbShowPassword = new System.Windows.Forms.PictureBox();
             this.btnExitLogin = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -40,11 +41,10 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pbLogoLogin = new System.Windows.Forms.PictureBox();
-            this.pbShowPassword = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -76,6 +76,16 @@ namespace DataSmart.Presentation_Layer
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 375);
             this.panel1.TabIndex = 0;
+            // 
+            // pbShowPassword
+            // 
+            this.pbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowPassword.Location = new System.Drawing.Point(308, 207);
+            this.pbShowPassword.Name = "pbShowPassword";
+            this.pbShowPassword.Size = new System.Drawing.Size(22, 20);
+            this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowPassword.TabIndex = 9;
+            this.pbShowPassword.TabStop = false;
             // 
             // btnExitLogin
             // 
@@ -143,6 +153,7 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnLogin
             // 
@@ -157,6 +168,7 @@ namespace DataSmart.Presentation_Layer
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pbLogoLogin
             // 
@@ -167,16 +179,6 @@ namespace DataSmart.Presentation_Layer
             this.pbLogoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogoLogin.TabIndex = 0;
             this.pbLogoLogin.TabStop = false;
-            // 
-            // pbShowPassword
-            // 
-            this.pbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbShowPassword.Location = new System.Drawing.Point(308, 207);
-            this.pbShowPassword.Name = "pbShowPassword";
-            this.pbShowPassword.Size = new System.Drawing.Size(22, 20);
-            this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbShowPassword.TabIndex = 9;
-            this.pbShowPassword.TabStop = false;
             // 
             // frmLogin
             // 
@@ -189,8 +191,8 @@ namespace DataSmart.Presentation_Layer
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).EndInit();
             this.ResumeLayout(false);
 
         }

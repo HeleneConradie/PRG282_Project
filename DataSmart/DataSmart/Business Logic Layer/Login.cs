@@ -9,7 +9,7 @@ namespace DataSmart.Business_Logic_Layer
 {
     class Login
     {
-        public bool CheckLogin(string Username, string Password)
+        public static bool CheckLogin(string Username, string Password)
         {
             List<string> Users = new List<string>();
             Users = DH_ReadLogin.ReadLogin();

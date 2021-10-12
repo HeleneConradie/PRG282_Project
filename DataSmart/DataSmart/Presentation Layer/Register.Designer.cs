@@ -76,6 +76,7 @@ namespace DataSmart.Presentation_Layer
             this.btnRegBack.TabIndex = 8;
             this.btnRegBack.Text = "BACK";
             this.btnRegBack.UseVisualStyleBackColor = false;
+            this.btnRegBack.Click += new System.EventHandler(this.btnRegBack_Click);
             // 
             // pnlRegister
             // 
