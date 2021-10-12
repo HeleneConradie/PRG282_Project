@@ -48,19 +48,8 @@ namespace DataSmart.Presentation_Layer
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblRegisterHeading = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tbOnlineRes2 = new System.Windows.Forms.TextBox();
-            this.tbModDesc2 = new System.Windows.Forms.TextBox();
-            this.tbModCode2 = new System.Windows.Forms.TextBox();
-            this.lblOnlineRes2 = new System.Windows.Forms.Label();
-            this.lblModDesc2 = new System.Windows.Forms.Label();
-            this.lblModCode2 = new System.Windows.Forms.Label();
-            this.lblModifyHeading = new System.Windows.Forms.Label();
-            this.pbModuleModify = new System.Windows.Forms.PictureBox();
             this.pnlRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbModuleModify)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -107,10 +96,10 @@ namespace DataSmart.Presentation_Layer
             this.pnlRegister.Controls.Add(this.tbSurname);
             this.pnlRegister.Controls.Add(this.tbName);
             this.pnlRegister.Controls.Add(this.lblRegisterHeading);
-            this.pnlRegister.Location = new System.Drawing.Point(8, 6);
+            this.pnlRegister.Location = new System.Drawing.Point(1, 2);
             this.pnlRegister.Name = "pnlRegister";
             this.pnlRegister.Size = new System.Drawing.Size(746, 249);
-            this.pnlRegister.TabIndex = 6;
+            this.pnlRegister.TabIndex = 12;
             // 
             // pbLogoReigster
             // 
@@ -259,115 +248,19 @@ namespace DataSmart.Presentation_Layer
             this.lblRegisterHeading.TabIndex = 0;
             this.lblRegisterHeading.Text = "Register";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.tbOnlineRes2);
-            this.panel1.Controls.Add(this.tbModDesc2);
-            this.panel1.Controls.Add(this.tbModCode2);
-            this.panel1.Controls.Add(this.lblOnlineRes2);
-            this.panel1.Controls.Add(this.lblModDesc2);
-            this.panel1.Controls.Add(this.lblModCode2);
-            this.panel1.Controls.Add(this.lblModifyHeading);
-            this.panel1.Controls.Add(this.pbModuleModify);
-            this.panel1.Location = new System.Drawing.Point(8, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 249);
-            this.panel1.TabIndex = 7;
-            // 
-            // tbOnlineRes2
-            // 
-            this.tbOnlineRes2.Location = new System.Drawing.Point(410, 165);
-            this.tbOnlineRes2.Name = "tbOnlineRes2";
-            this.tbOnlineRes2.Size = new System.Drawing.Size(153, 20);
-            this.tbOnlineRes2.TabIndex = 18;
-            // 
-            // tbModDesc2
-            // 
-            this.tbModDesc2.Location = new System.Drawing.Point(410, 116);
-            this.tbModDesc2.Name = "tbModDesc2";
-            this.tbModDesc2.Size = new System.Drawing.Size(153, 20);
-            this.tbModDesc2.TabIndex = 17;
-            // 
-            // tbModCode2
-            // 
-            this.tbModCode2.Location = new System.Drawing.Point(410, 66);
-            this.tbModCode2.Name = "tbModCode2";
-            this.tbModCode2.Size = new System.Drawing.Size(153, 20);
-            this.tbModCode2.TabIndex = 16;
-            // 
-            // lblOnlineRes2
-            // 
-            this.lblOnlineRes2.AutoSize = true;
-            this.lblOnlineRes2.BackColor = System.Drawing.Color.Transparent;
-            this.lblOnlineRes2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOnlineRes2.Location = new System.Drawing.Point(264, 169);
-            this.lblOnlineRes2.Name = "lblOnlineRes2";
-            this.lblOnlineRes2.Size = new System.Drawing.Size(118, 16);
-            this.lblOnlineRes2.TabIndex = 15;
-            this.lblOnlineRes2.Text = "Online Resources:";
-            // 
-            // lblModDesc2
-            // 
-            this.lblModDesc2.AutoSize = true;
-            this.lblModDesc2.BackColor = System.Drawing.Color.Transparent;
-            this.lblModDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModDesc2.Location = new System.Drawing.Point(268, 120);
-            this.lblModDesc2.Name = "lblModDesc2";
-            this.lblModDesc2.Size = new System.Drawing.Size(127, 16);
-            this.lblModDesc2.TabIndex = 14;
-            this.lblModDesc2.Text = "Module Description:";
-            // 
-            // lblModCode2
-            // 
-            this.lblModCode2.AutoSize = true;
-            this.lblModCode2.BackColor = System.Drawing.Color.Transparent;
-            this.lblModCode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModCode2.Location = new System.Drawing.Point(268, 67);
-            this.lblModCode2.Name = "lblModCode2";
-            this.lblModCode2.Size = new System.Drawing.Size(92, 16);
-            this.lblModCode2.TabIndex = 13;
-            this.lblModCode2.Text = "Module Code:";
-            // 
-            // lblModifyHeading
-            // 
-            this.lblModifyHeading.AutoSize = true;
-            this.lblModifyHeading.BackColor = System.Drawing.Color.Transparent;
-            this.lblModifyHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModifyHeading.Location = new System.Drawing.Point(320, 6);
-            this.lblModifyHeading.Name = "lblModifyHeading";
-            this.lblModifyHeading.Size = new System.Drawing.Size(147, 24);
-            this.lblModifyHeading.TabIndex = 12;
-            this.lblModifyHeading.Text = "Modify Module";
-            // 
-            // pbModuleModify
-            // 
-            this.pbModuleModify.Image = global::DataSmart.Properties.Resources.DataSmart_Logo;
-            this.pbModuleModify.Location = new System.Drawing.Point(2, 2);
-            this.pbModuleModify.Name = "pbModuleModify";
-            this.pbModuleModify.Size = new System.Drawing.Size(159, 121);
-            this.pbModuleModify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbModuleModify.TabIndex = 11;
-            this.pbModuleModify.TabStop = false;
-            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 301);
+            this.ClientSize = new System.Drawing.Size(749, 301);
+            this.Controls.Add(this.pnlRegister);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnRegBack);
-            this.Controls.Add(this.pnlRegister);
-            this.Controls.Add(this.panel1);
             this.Name = "frmRegister";
             this.Text = "Register";
             this.pnlRegister.ResumeLayout(false);
             this.pnlRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbModuleModify)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,6 +270,13 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnRegBack;
         public System.Windows.Forms.Panel pnlRegister;
+        private System.Windows.Forms.PictureBox pbLogoReigster;
+        private System.Windows.Forms.Label lblConPass;
+        private System.Windows.Forms.TextBox tbConPass;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lblCampus;
         private System.Windows.Forms.TextBox tbCampus;
         private System.Windows.Forms.Label lbllblEmail;
@@ -386,21 +286,5 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.TextBox tbSurname;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblRegisterHeading;
-        public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbOnlineRes2;
-        private System.Windows.Forms.TextBox tbModDesc2;
-        private System.Windows.Forms.TextBox tbModCode2;
-        private System.Windows.Forms.Label lblOnlineRes2;
-        private System.Windows.Forms.Label lblModDesc2;
-        private System.Windows.Forms.Label lblModCode2;
-        private System.Windows.Forms.Label lblModifyHeading;
-        private System.Windows.Forms.PictureBox pbModuleModify;
-        private System.Windows.Forms.Label lblConPass;
-        private System.Windows.Forms.TextBox tbConPass;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.PictureBox pbLogoReigster;
     }
 }

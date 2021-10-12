@@ -16,5 +16,25 @@ namespace DataSmart.Presentation_Layer
         {
             InitializeComponent();
         }
+
+        private void btnModBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
