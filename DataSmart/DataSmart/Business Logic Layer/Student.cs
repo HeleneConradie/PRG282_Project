@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DataSmart.Data_Access_Layer;
 
@@ -49,24 +50,24 @@ namespace DataSmart.Business_Logic_Layer
             this.StudentAddress = studentAddress;
         }
 
-        public string InsertStudentDetails(string num, string name, string middleName, string surname, Image img, string dob, string gender, string phone, string address)
+        public bool InsertStudentDetails(string num, string name, string middleName, string surname, Image img, string dob, string gender, string phone, string address)
         {
             bool Success = student.InsertStudent(num, name, middleName, surname, img, dob, gender, phone, address);
             if (Success == true)
             {
-                return "Student added successfully!";
+                return true;
             }
-            return "OOPS! Something went wrong";
+            return false;
         }
 
-        public string DeleteStudentDetails(string stuNum)
+        public bool DeleteStudentDetails(string stuNum)
         { 
             bool Success = student.DeleteStudent(stuNum);
             if (Success == true)
             {
-                return "Student has been deleted successfully!";
+                return true;
             }
-            return "OOPS! Something went wrong";
+            return false;
         }
 
         public List<Student> DisplayAllStudents()
@@ -75,13 +76,13 @@ namespace DataSmart.Business_Logic_Layer
             return Students;
         }
 
-        public Image ConvertToImage(string stringImage)
-        {
-            byte[] Bytes = Convert.FromBase64String(stringImage);
-            MemoryStream memoryStream = new MemoryStream(Bytes);
-            Image StudImage = Image.FromStream(memoryStream, true, true);
-            return StudImage;
-        }
+        //public Image ConvertToImage(string stringImage)
+        //{
+        //    byte[] Bytes = Convert.FromBase64String(stringImage);
+        //    MemoryStream memoryStream = new MemoryStream(Bytes);
+        //    Image StudImage = Image.FromStream(memoryStream, true, true);
+        //    return StudImage;
+        //}
 
         public string DisplaySearchedStudent(string StudentID)
         {
@@ -89,23 +90,73 @@ namespace DataSmart.Business_Logic_Layer
             if (FoundStudent != null)
             {
                 object[] StudentContent = FoundStudent.Split('#');
-                Image[] Image = new Image[1];
-                Image[0] = ConvertToImage(StudentContent[4].ToString());
+                //Image[] Image = new Image[1];
+                //Image[0] = ConvertToImage(StudentContent[4].ToString());
 
-                Students.Add(new Student(StudentContent[0].ToString(), StudentContent[1].ToString(), StudentContent[2].ToString(), StudentContent[3].ToString(), Image[0], StudentContent[5].ToString(), StudentContent[6].ToString(), StudentContent[7].ToString(), StudentContent[8].ToString()));
+                Students.Add(new Student(StudentContent[0].ToString(), StudentContent[1].ToString(), StudentContent[2].ToString(), StudentContent[3].ToString(), /*Image[0]*/ StudentContent[5].ToString(), StudentContent[6].ToString(), StudentContent[7].ToString(), StudentContent[8].ToString()));
                 //return Students;
             }
             return null;
         }
 
-        public string UpdateStudentInformation(string StudNum, string StuName, string StuMiddleName, string StuSurname, Image StuImage, string DOB, string Gender, string Phone, string Address)
+        public bool UpdateStudentInformation(string StudNum, string StuName, string StuMiddleName, string StuSurname, Image StuImage, string DOB, string Gender, string Phone, string Address)
         {
             bool Success = student.UpdateStudent(StudNum, StuName, StuMiddleName, StuSurname, StuImage, DOB, Gender, Phone, Address);
             if (Success == true)
             {
-                return "Student has been updated successfully!";
+                return true;
             }
-            return "OOPS! Something went wrong";
+            return false;
+        }
+
+        public int ValidationStudent(string StuNumber, string StuFName, string StuMName, string StuLName, string StuImage, string StuGender, string StuPhone, string StuAddress)
+        {
+            Regex numvalidation = new Regex("^[a-zA-Z0-9]*$");
+            Regex stringvalidation = new Regex("^[A-Z][a-zA-Z]*$");
+            Regex addressvalidation = new Regex("^[0-9a-zA-Z]*$");
+            Regex phonenumber = new Regex("^[+27|0][6-8][0-9]{7}$");
+
+            bool isValidNumber = numvalidation.IsMatch(StuNumber);
+            bool isValidName = stringvalidation.IsMatch(StuFName);
+            bool isValidMName = stringvalidation.IsMatch(StuMName);
+            bool isValidLName = stringvalidation.IsMatch(StuLName);
+            bool isValidPhone = phonenumber.IsMatch(StuPhone);
+            bool isValidAddress = addressvalidation.IsMatch(StuAddress);
+
+            if (StuNumber.Equals(null) || StuFName.Equals(null) || StuLName.Equals(null) || StuImage.Equals(null) || StuGender.Equals(null) || StuPhone.Equals(null)||
+                StuAddress.Equals(null))
+            {
+                return 0;
+            }
+            if (StuNumber.Length > 7 || StuNumber.Length < 5 || StuFName.Length > 50 || StuMName.Length > 50 || StuLName.Length > 50 || StuAddress.Length > 50)
+            {
+                return 2;
+            }
+            if (isValidNumber && isValidName && isValidMName && isValidLName && isValidPhone && isValidAddress)
+            {
+                return -1;
+            }
+            return 2;
+        }
+
+        public int DeleteValidation(string StuNumber)
+        {
+            Regex numvalidation = new Regex("^[a-zA-Z0-9]*$");
+            bool isValidNumber = numvalidation.IsMatch(StuNumber);
+
+            if (StuNumber.Equals(null))
+            {
+                return 0;
+            }
+            if (StuNumber.Length > 7 || StuNumber.Length < 5)
+            {
+                return 1;
+            }
+            if (isValidNumber)
+            {
+                return -1;
+            }
+            return 2;
         }
     }
 }

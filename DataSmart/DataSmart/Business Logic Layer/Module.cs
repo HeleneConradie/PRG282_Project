@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DataSmart.Business_Logic_Layer
@@ -33,34 +34,34 @@ namespace DataSmart.Business_Logic_Layer
         public string OnlineResources1 { get => OnlineResources; set => OnlineResources = value; }
 
 
-        public string InsertMod(string code, string name, string description, string onlineres)
+        public bool InsertMod(string code, string name, string description, string onlineres)
         {
             bool Success = module.InsertModule(code, name, description, onlineres);
             if (Success == true)
             {
-                return "Module added successfully!";
+                return true;
             }
-            return "OOPS! Something went wrong";
+            return false;
         }
 
-        public string UpdateModule(string modID, string modName, string modDesc)
+        public bool UpdateModule(string modID, string modName, string modDesc)
         {
             bool Success = module.UpdateModuleInformation(modID, modName, modDesc);
             if (Success == true)
             {
-                return "Module has been updated successfully!";
+                return true;
             }
-            return "OOPS! Something went wrong";
+            return false;
         }
 
-        public string ModDelete(string modulecode)
+        public bool ModDelete(string modulecode)
         {
             bool Success = module.DeleteModule(modulecode);
             if (Success == true)
             {
-                return "Module has been deleted successfully!";
+                return true;
             }
-            return "OOPS! Something went wrong";
+            return false;
         }
 
         public List<Module> DisplayAll()
@@ -81,5 +82,47 @@ namespace DataSmart.Business_Logic_Layer
             return null;
         }
 
+        public int ValidationModule(string ModuleCode, string ModuleName, string ModuleDescription, string OnlineResources)
+        {
+            Regex codevalidation = new Regex("^[a-zA-Z0-9]*$");
+            Regex stringvalidation = new Regex("^[A-Z][a-zA-Z]*$");
+
+            bool isValidCode = codevalidation.IsMatch(ModuleCode);
+            bool isValidName = stringvalidation.IsMatch(ModuleName);
+            bool isValidDescription = stringvalidation.IsMatch(ModuleDescription);
+
+            if (ModuleCode.Equals(null) || ModuleName.Equals(null) || ModuleDescription.Equals(null))
+            {
+                return 0;
+            }
+            if (ModuleCode.Length > 6 || ModuleCode.Length < 6 || ModuleName.Length > 30 || ModuleDescription.Length > 150 || OnlineResources.Length > 100)
+            {
+                return 1;
+            }
+            if (isValidCode && isValidName && isValidDescription)
+            {
+                return -1;
+            }
+            return 2;
+        }
+
+        public int DeleteValidation(string ModuleCode)
+        {
+            Regex codevalidation = new Regex("^[a-zA-Z0-9]*$");
+            bool isValidCode = codevalidation.IsMatch(ModuleCode);
+            if (ModuleCode.Equals(null))
+            {
+                return 0;
+            }
+            if (ModuleCode.Length > 6 || ModuleCode.Length < 6)
+            {
+                return 1;
+            }
+            if (isValidCode)
+            {
+                return -1;
+            }
+            return 2;
+        }
     }
 }
