@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DataSmart.Presentation_Layer
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }

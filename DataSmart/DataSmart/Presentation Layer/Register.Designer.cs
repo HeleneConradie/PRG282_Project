@@ -1,7 +1,7 @@
 ﻿
 namespace DataSmart.Presentation_Layer
 {
-    partial class Register
+    partial class frmRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnRegBack = new System.Windows.Forms.Button();
             this.pnlRegister = new System.Windows.Forms.Panel();
-            this.pbReigster = new System.Windows.Forms.PictureBox();
+            this.pbLogoReigster = new System.Windows.Forms.PictureBox();
             this.lblConPass = new System.Windows.Forms.Label();
             this.tbConPass = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace DataSmart.Presentation_Layer
             this.lblModifyHeading = new System.Windows.Forms.Label();
             this.pbModuleModify = new System.Windows.Forms.PictureBox();
             this.pnlRegister.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReigster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModuleModify)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +68,11 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(479, 261);
+            this.btnRegister.Location = new System.Drawing.Point(418, 261);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(92, 33);
+            this.btnRegister.Size = new System.Drawing.Size(117, 33);
             this.btnRegister.TabIndex = 11;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // btnRegBack
@@ -91,7 +91,7 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pnlRegister.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlRegister.Controls.Add(this.pbReigster);
+            this.pnlRegister.Controls.Add(this.pbLogoReigster);
             this.pnlRegister.Controls.Add(this.lblConPass);
             this.pnlRegister.Controls.Add(this.tbConPass);
             this.pnlRegister.Controls.Add(this.lblPassword);
@@ -112,15 +112,15 @@ namespace DataSmart.Presentation_Layer
             this.pnlRegister.Size = new System.Drawing.Size(746, 249);
             this.pnlRegister.TabIndex = 6;
             // 
-            // pbReigster
+            // pbLogoReigster
             // 
-            this.pbReigster.Image = global::DataSmart.Properties.Resources.DataSmart_Logo;
-            this.pbReigster.Location = new System.Drawing.Point(3, 3);
-            this.pbReigster.Name = "pbReigster";
-            this.pbReigster.Size = new System.Drawing.Size(159, 121);
-            this.pbReigster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbReigster.TabIndex = 17;
-            this.pbReigster.TabStop = false;
+            this.pbLogoReigster.Image = global::DataSmart.Properties.Resources.DataSmart_Logo;
+            this.pbLogoReigster.Location = new System.Drawing.Point(3, 3);
+            this.pbLogoReigster.Name = "pbLogoReigster";
+            this.pbLogoReigster.Size = new System.Drawing.Size(159, 121);
+            this.pbLogoReigster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoReigster.TabIndex = 17;
+            this.pbLogoReigster.TabStop = false;
             // 
             // lblConPass
             // 
@@ -351,7 +351,7 @@ namespace DataSmart.Presentation_Layer
             this.pbModuleModify.TabIndex = 11;
             this.pbModuleModify.TabStop = false;
             // 
-            // Register
+            // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,11 +360,11 @@ namespace DataSmart.Presentation_Layer
             this.Controls.Add(this.btnRegBack);
             this.Controls.Add(this.pnlRegister);
             this.Controls.Add(this.panel1);
-            this.Name = "Register";
+            this.Name = "frmRegister";
             this.Text = "Register";
             this.pnlRegister.ResumeLayout(false);
             this.pnlRegister.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReigster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbModuleModify)).EndInit();
@@ -401,6 +401,6 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.PictureBox pbReigster;
+        private System.Windows.Forms.PictureBox pbLogoReigster;
     }
 }

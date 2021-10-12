@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DataSmart.Presentation_Layer
 {
-    public partial class Register : Form
+    public partial class frmRegister : Form
     {
-        public Register()
+        public frmRegister()
         {
             InitializeComponent();
         }

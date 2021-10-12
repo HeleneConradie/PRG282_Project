@@ -1,7 +1,7 @@
 ﻿
 namespace DataSmart.Presentation_Layer
 {
-    partial class Menu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,51 +29,51 @@ namespace DataSmart.Presentation_Layer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
+            this.pnlBackMenu = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnContinue = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbOption = new System.Windows.Forms.GroupBox();
             this.rbtnViewAll = new System.Windows.Forms.RadioButton();
             this.rbtnSearch = new System.Windows.Forms.RadioButton();
             this.rbtnAdd = new System.Windows.Forms.RadioButton();
             this.rbtnModify = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbType = new System.Windows.Forms.GroupBox();
             this.rbtnStudent = new System.Windows.Forms.RadioButton();
             this.rbtnModule = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbLogoMenu = new System.Windows.Forms.PictureBox();
+            this.pnlBackMenu.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            this.gbOption.SuspendLayout();
+            this.gbType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoMenu)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlBackMenu
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(679, 478);
-            this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnlBackMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBackMenu.BackgroundImage")));
+            this.pnlBackMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlBackMenu.Controls.Add(this.pnlMenu);
+            this.pnlBackMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBackMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackMenu.Name = "pnlBackMenu";
+            this.pnlBackMenu.Size = new System.Drawing.Size(679, 478);
+            this.pnlBackMenu.TabIndex = 2;
+            this.pnlBackMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel1
+            // pnlMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btnContinue);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(124, 55);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(421, 375);
-            this.panel1.TabIndex = 0;
+            this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMenu.BackgroundImage")));
+            this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMenu.Controls.Add(this.btnContinue);
+            this.pnlMenu.Controls.Add(this.gbOption);
+            this.pnlMenu.Controls.Add(this.gbType);
+            this.pnlMenu.Controls.Add(this.pbLogoMenu);
+            this.pnlMenu.Location = new System.Drawing.Point(124, 55);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(421, 375);
+            this.pnlMenu.TabIndex = 0;
             // 
             // btnContinue
             // 
@@ -82,25 +82,25 @@ namespace DataSmart.Presentation_Layer
             this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinue.Location = new System.Drawing.Point(144, 301);
+            this.btnContinue.Location = new System.Drawing.Point(132, 309);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(129, 54);
+            this.btnContinue.Size = new System.Drawing.Size(154, 41);
             this.btnContinue.TabIndex = 3;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = false;
             // 
-            // groupBox2
+            // gbOption
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.rbtnViewAll);
-            this.groupBox2.Controls.Add(this.rbtnSearch);
-            this.groupBox2.Controls.Add(this.rbtnAdd);
-            this.groupBox2.Controls.Add(this.rbtnModify);
-            this.groupBox2.Location = new System.Drawing.Point(222, 158);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(180, 115);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
+            this.gbOption.BackColor = System.Drawing.Color.Transparent;
+            this.gbOption.Controls.Add(this.rbtnViewAll);
+            this.gbOption.Controls.Add(this.rbtnSearch);
+            this.gbOption.Controls.Add(this.rbtnAdd);
+            this.gbOption.Controls.Add(this.rbtnModify);
+            this.gbOption.Location = new System.Drawing.Point(222, 158);
+            this.gbOption.Name = "gbOption";
+            this.gbOption.Size = new System.Drawing.Size(180, 115);
+            this.gbOption.TabIndex = 2;
+            this.gbOption.TabStop = false;
             // 
             // rbtnViewAll
             // 
@@ -146,15 +146,15 @@ namespace DataSmart.Presentation_Layer
             this.rbtnModify.Text = "Modify";
             this.rbtnModify.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbType
             // 
-            this.groupBox1.Controls.Add(this.rbtnStudent);
-            this.groupBox1.Controls.Add(this.rbtnModule);
-            this.groupBox1.Location = new System.Drawing.Point(14, 158);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(172, 115);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
+            this.gbType.Controls.Add(this.rbtnStudent);
+            this.gbType.Controls.Add(this.rbtnModule);
+            this.gbType.Location = new System.Drawing.Point(14, 158);
+            this.gbType.Name = "gbType";
+            this.gbType.Size = new System.Drawing.Size(172, 115);
+            this.gbType.TabIndex = 1;
+            this.gbType.TabStop = false;
             // 
             // rbtnStudent
             // 
@@ -179,45 +179,45 @@ namespace DataSmart.Presentation_Layer
             this.rbtnModule.UseVisualStyleBackColor = true;
             this.rbtnModule.CheckedChanged += new System.EventHandler(this.rbtnModule_CheckedChanged);
             // 
-            // pictureBox1
+            // pbLogoMenu
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(112, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbLogoMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoMenu.Image")));
+            this.pbLogoMenu.Location = new System.Drawing.Point(112, 0);
+            this.pbLogoMenu.Name = "pbLogoMenu";
+            this.pbLogoMenu.Size = new System.Drawing.Size(190, 152);
+            this.pbLogoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoMenu.TabIndex = 0;
+            this.pbLogoMenu.TabStop = false;
             // 
-            // Menu
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 478);
-            this.Controls.Add(this.panel2);
-            this.Name = "Menu";
+            this.Controls.Add(this.pnlBackMenu);
+            this.Name = "frmMenu";
             this.Text = "Menu";
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlBackMenu.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
+            this.gbOption.ResumeLayout(false);
+            this.gbOption.PerformLayout();
+            this.gbType.ResumeLayout(false);
+            this.gbType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel pnlBackMenu;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.GroupBox gbType;
         private System.Windows.Forms.RadioButton rbtnStudent;
         private System.Windows.Forms.RadioButton rbtnModule;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLogoMenu;
         private System.Windows.Forms.Button btnContinue;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbOption;
         private System.Windows.Forms.RadioButton rbtnViewAll;
         private System.Windows.Forms.RadioButton rbtnSearch;
         private System.Windows.Forms.RadioButton rbtnAdd;

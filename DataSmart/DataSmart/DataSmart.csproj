@@ -82,11 +82,11 @@
     <Compile Include="Presentation Layer\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\Search.cs">
+    <Compile Include="Presentation Layer\Display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\Search.Designer.cs">
-      <DependentUpon>Search.cs</DependentUpon>
+    <Compile Include="Presentation Layer\Display.Designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="Presentation Layer\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\Search.resx">
-      <DependentUpon>Search.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

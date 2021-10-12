@@ -1,7 +1,7 @@
 ﻿
 namespace DataSmart.Presentation_Layer
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,20 @@ namespace DataSmart.Presentation_Layer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExitLogin = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pbLogin = new System.Windows.Forms.PictureBox();
+            this.pbLogoLogin = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -60,17 +61,32 @@ namespace DataSmart.Presentation_Layer
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnExitLogin);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.tbPassword);
             this.panel1.Controls.Add(this.tbUsername);
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.pbLogin);
+            this.panel1.Controls.Add(this.pbLogoLogin);
             this.panel1.Location = new System.Drawing.Point(127, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 375);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExitLogin
+            // 
+            this.btnExitLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnExitLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExitLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExitLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitLogin.Location = new System.Drawing.Point(354, 341);
+            this.btnExitLogin.Name = "btnExitLogin";
+            this.btnExitLogin.Size = new System.Drawing.Size(64, 31);
+            this.btnExitLogin.TabIndex = 5;
+            this.btnExitLogin.Text = "EXIT";
+            this.btnExitLogin.UseVisualStyleBackColor = false;
             // 
             // lblPassword
             // 
@@ -97,7 +113,7 @@ namespace DataSmart.Presentation_Layer
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(188, 207);
+            this.tbPassword.Location = new System.Drawing.Point(176, 207);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(126, 22);
@@ -106,7 +122,7 @@ namespace DataSmart.Presentation_Layer
             // tbUsername
             // 
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.Location = new System.Drawing.Point(188, 166);
+            this.tbUsername.Location = new System.Drawing.Point(176, 166);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(126, 22);
             this.tbUsername.TabIndex = 5;
@@ -118,11 +134,11 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(141, 318);
+            this.btnRegister.Location = new System.Drawing.Point(141, 304);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(129, 31);
             this.btnRegister.TabIndex = 4;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // btnLogin
@@ -131,36 +147,36 @@ namespace DataSmart.Presentation_Layer
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(141, 251);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(141, 250);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 54);
+            this.btnLogin.Size = new System.Drawing.Size(129, 33);
             this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // pbLogin
+            // pbLogoLogin
             // 
-            this.pbLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbLogin.Image")));
-            this.pbLogin.Location = new System.Drawing.Point(112, 0);
-            this.pbLogin.Name = "pbLogin";
-            this.pbLogin.Size = new System.Drawing.Size(190, 152);
-            this.pbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogin.TabIndex = 0;
-            this.pbLogin.TabStop = false;
+            this.pbLogoLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoLogin.Image")));
+            this.pbLogoLogin.Location = new System.Drawing.Point(112, 1);
+            this.pbLogoLogin.Name = "pbLogoLogin";
+            this.pbLogoLogin.Size = new System.Drawing.Size(190, 152);
+            this.pbLogoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoLogin.TabIndex = 0;
+            this.pbLogoLogin.TabStop = false;
             // 
-            // Login
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 472);
             this.Controls.Add(this.panel2);
-            this.Name = "Login";
-            this.Text = "Form1";
+            this.Name = "frmLogin";
+            this.Text = "Login";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,11 +186,12 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.PictureBox pbLogin;
+        private System.Windows.Forms.PictureBox pbLogoLogin;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Button btnExitLogin;
     }
 }
