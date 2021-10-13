@@ -80,24 +80,25 @@ namespace DataSmart.Presentation_Layer
         {
             try
             {
-                if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow row = this.dgvDisplay.Rows[e.RowIndex];
-                    Byte[] bytes = (Byte[])dgvDisplay.Rows[e.RowIndex].Cells["StudentImage"].Value;
-                    using (var memoryStream = new MemoryStream(bytes))
-                    {
-                        pbStudentImageShow.Image = Image.FromStream(memoryStream);
-                    }
-                    string StudCode = row.Cells[0].Value.ToString();
-                    StudentModule stuMod = new StudentModule();
-                    source2.DataSource = stuMod.DisplayAll(StudCode);
-                    dgvDisplayModStud.DataSource = source2;
-                }
+                 if (e.RowIndex >= 0)
+                 {
+                     DataGridViewRow row = this.dgvDisplay.Rows[e.RowIndex];
+                     Byte[] bytes = (Byte[])dgvDisplay.Rows[e.RowIndex].Cells["StudentImage"].Value;
+                     using (var memoryStream = new MemoryStream(bytes))
+                     {
+                         pbStudentImageShow.Image = Image.FromStream(memoryStream);
+                     }
+                     string StudCode = row.Cells[0].Value.ToString();
+                     StudentModule stuMod = new StudentModule();
+                     source2.DataSource = stuMod.DisplayAll(StudCode);
+                     dgvDisplayModStud.DataSource = source2;
+                 }
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                 MessageBox.Show(exc.Message);
             }
+            
         }
     }
 }
