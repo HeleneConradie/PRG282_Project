@@ -17,7 +17,7 @@ namespace DataSmart
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmModule());
+            Application.Run(new frmMenu());
         }
     }
 }

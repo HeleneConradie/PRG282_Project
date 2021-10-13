@@ -16,3 +16,10 @@ C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignm
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.exe
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.pdb
 C:\Users\helen\OneDrive\Documents\BELGIUM CAMPUS\Second Year\PRG\PRG 282\Assignment & Project\Milestone 2\PRG282_Project_Group_2\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmModule.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.csproj.AssemblyReference.cache
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmLogin.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmMenu.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmModule.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmRegister.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmDisplay.resources
+C:\Users\Morne\OneDrive\Documents\Belgium Campus\Second Year\PRG 282\Project\Milestone 2\PRG282_Project\DataSmart\DataSmart\obj\Debug\DataSmart.Presentation_Layer.frmStudent.resources

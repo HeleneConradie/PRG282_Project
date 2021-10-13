@@ -114,7 +114,6 @@ namespace DataSmart.Presentation_Layer
             this.Controls.Add(this.dgvDisplay);
             this.Name = "frmDisplay";
             this.Text = "Display";
-            this.Load += new System.EventHandler(this.frmDisplay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoDisplay)).EndInit();
             this.pnlDisplay.ResumeLayout(false);

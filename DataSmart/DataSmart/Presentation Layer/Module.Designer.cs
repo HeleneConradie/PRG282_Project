@@ -34,7 +34,7 @@ namespace DataSmart.Presentation_Layer
             this.btnModUpdate = new System.Windows.Forms.Button();
             this.btnModDelete = new System.Windows.Forms.Button();
             this.pnlModifyModule = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlAddModule = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblOnlineRes = new System.Windows.Forms.Label();
             this.tbOnlineRes = new System.Windows.Forms.TextBox();
@@ -44,7 +44,9 @@ namespace DataSmart.Presentation_Layer
             this.tbModDesc = new System.Windows.Forms.TextBox();
             this.tbModName = new System.Windows.Forms.TextBox();
             this.tbModCode = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblModAddHeading = new System.Windows.Forms.Label();
+            this.tbModName2 = new System.Windows.Forms.TextBox();
+            this.lblModuleName2 = new System.Windows.Forms.Label();
             this.tbOnlineRes2 = new System.Windows.Forms.TextBox();
             this.tbModDesc2 = new System.Windows.Forms.TextBox();
             this.tbModCode2 = new System.Windows.Forms.TextBox();
@@ -53,10 +55,8 @@ namespace DataSmart.Presentation_Layer
             this.lblModCode2 = new System.Windows.Forms.Label();
             this.lblModifyHeading = new System.Windows.Forms.Label();
             this.pbModuleModify = new System.Windows.Forms.PictureBox();
-            this.lblModuleName2 = new System.Windows.Forms.Label();
-            this.tbModName2 = new System.Windows.Forms.TextBox();
             this.pnlModifyModule.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlAddModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModuleModify)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +117,7 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pnlModifyModule.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlModifyModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlModifyModule.Controls.Add(this.panel2);
+            this.pnlModifyModule.Controls.Add(this.pnlAddModule);
             this.pnlModifyModule.Controls.Add(this.tbModName2);
             this.pnlModifyModule.Controls.Add(this.lblModuleName2);
             this.pnlModifyModule.Controls.Add(this.tbOnlineRes2);
@@ -133,24 +133,24 @@ namespace DataSmart.Presentation_Layer
             this.pnlModifyModule.Size = new System.Drawing.Size(746, 249);
             this.pnlModifyModule.TabIndex = 1;
             // 
-            // panel2
+            // pnlAddModule
             // 
-            this.panel2.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lblOnlineRes);
-            this.panel2.Controls.Add(this.tbOnlineRes);
-            this.panel2.Controls.Add(this.lblModDesc);
-            this.panel2.Controls.Add(this.lblModName);
-            this.panel2.Controls.Add(this.lblModCode);
-            this.panel2.Controls.Add(this.tbModDesc);
-            this.panel2.Controls.Add(this.tbModName);
-            this.panel2.Controls.Add(this.tbModCode);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(1, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(746, 249);
-            this.panel2.TabIndex = 10;
+            this.pnlAddModule.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
+            this.pnlAddModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlAddModule.Controls.Add(this.pictureBox1);
+            this.pnlAddModule.Controls.Add(this.lblOnlineRes);
+            this.pnlAddModule.Controls.Add(this.tbOnlineRes);
+            this.pnlAddModule.Controls.Add(this.lblModDesc);
+            this.pnlAddModule.Controls.Add(this.lblModName);
+            this.pnlAddModule.Controls.Add(this.lblModCode);
+            this.pnlAddModule.Controls.Add(this.tbModDesc);
+            this.pnlAddModule.Controls.Add(this.tbModName);
+            this.pnlAddModule.Controls.Add(this.tbModCode);
+            this.pnlAddModule.Controls.Add(this.lblModAddHeading);
+            this.pnlAddModule.Location = new System.Drawing.Point(0, 0);
+            this.pnlAddModule.Name = "pnlAddModule";
+            this.pnlAddModule.Size = new System.Drawing.Size(746, 249);
+            this.pnlAddModule.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -234,16 +234,34 @@ namespace DataSmart.Presentation_Layer
             this.tbModCode.Size = new System.Drawing.Size(153, 20);
             this.tbModCode.TabIndex = 1;
             // 
-            // label5
+            // lblModAddHeading
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(340, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Add Module";
+            this.lblModAddHeading.AutoSize = true;
+            this.lblModAddHeading.BackColor = System.Drawing.Color.Transparent;
+            this.lblModAddHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModAddHeading.Location = new System.Drawing.Point(340, 5);
+            this.lblModAddHeading.Name = "lblModAddHeading";
+            this.lblModAddHeading.Size = new System.Drawing.Size(124, 24);
+            this.lblModAddHeading.TabIndex = 0;
+            this.lblModAddHeading.Text = "Add Module";
+            // 
+            // tbModName2
+            // 
+            this.tbModName2.Location = new System.Drawing.Point(410, 103);
+            this.tbModName2.Name = "tbModName2";
+            this.tbModName2.Size = new System.Drawing.Size(280, 20);
+            this.tbModName2.TabIndex = 20;
+            // 
+            // lblModuleName2
+            // 
+            this.lblModuleName2.AutoSize = true;
+            this.lblModuleName2.BackColor = System.Drawing.Color.Transparent;
+            this.lblModuleName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModuleName2.Location = new System.Drawing.Point(270, 107);
+            this.lblModuleName2.Name = "lblModuleName2";
+            this.lblModuleName2.Size = new System.Drawing.Size(96, 16);
+            this.lblModuleName2.TabIndex = 19;
+            this.lblModuleName2.Text = "Module Name:";
             // 
             // tbOnlineRes2
             // 
@@ -320,24 +338,6 @@ namespace DataSmart.Presentation_Layer
             this.pbModuleModify.TabIndex = 11;
             this.pbModuleModify.TabStop = false;
             // 
-            // lblModuleName2
-            // 
-            this.lblModuleName2.AutoSize = true;
-            this.lblModuleName2.BackColor = System.Drawing.Color.Transparent;
-            this.lblModuleName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModuleName2.Location = new System.Drawing.Point(270, 107);
-            this.lblModuleName2.Name = "lblModuleName2";
-            this.lblModuleName2.Size = new System.Drawing.Size(96, 16);
-            this.lblModuleName2.TabIndex = 19;
-            this.lblModuleName2.Text = "Module Name:";
-            // 
-            // tbModName2
-            // 
-            this.tbModName2.Location = new System.Drawing.Point(410, 103);
-            this.tbModName2.Name = "tbModName2";
-            this.tbModName2.Size = new System.Drawing.Size(280, 20);
-            this.tbModName2.TabIndex = 20;
-            // 
             // frmModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,8 +353,8 @@ namespace DataSmart.Presentation_Layer
             this.Text = "Module";
             this.pnlModifyModule.ResumeLayout(false);
             this.pnlModifyModule.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlAddModule.ResumeLayout(false);
+            this.pnlAddModule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModuleModify)).EndInit();
             this.ResumeLayout(false);
@@ -375,7 +375,7 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Button btnModAdd;
         private System.Windows.Forms.Button btnModUpdate;
         private System.Windows.Forms.Button btnModDelete;
-        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel pnlAddModule;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblOnlineRes;
         private System.Windows.Forms.TextBox tbOnlineRes;
@@ -385,7 +385,7 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.TextBox tbModDesc;
         private System.Windows.Forms.TextBox tbModName;
         private System.Windows.Forms.TextBox tbModCode;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblModAddHeading;
         private System.Windows.Forms.TextBox tbModName2;
         private System.Windows.Forms.Label lblModuleName2;
     }

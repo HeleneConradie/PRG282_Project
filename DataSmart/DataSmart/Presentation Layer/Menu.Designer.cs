@@ -59,7 +59,6 @@ namespace DataSmart.Presentation_Layer
             this.pnlBackMenu.Name = "pnlBackMenu";
             this.pnlBackMenu.Size = new System.Drawing.Size(679, 478);
             this.pnlBackMenu.TabIndex = 2;
-            this.pnlBackMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pnlMenu
             // 
@@ -88,6 +87,7 @@ namespace DataSmart.Presentation_Layer
             this.btnContinue.TabIndex = 3;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // gbOption
             // 
@@ -177,7 +177,6 @@ namespace DataSmart.Presentation_Layer
             this.rbtnModule.TabStop = true;
             this.rbtnModule.Text = "Module";
             this.rbtnModule.UseVisualStyleBackColor = true;
-            this.rbtnModule.CheckedChanged += new System.EventHandler(this.rbtnModule_CheckedChanged);
             // 
             // pbLogoMenu
             // 

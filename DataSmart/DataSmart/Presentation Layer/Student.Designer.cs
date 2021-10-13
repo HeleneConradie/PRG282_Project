@@ -33,7 +33,7 @@ namespace DataSmart.Presentation_Layer
             this.btnStudentAdd = new System.Windows.Forms.Button();
             this.btnStudentUpdate = new System.Windows.Forms.Button();
             this.btnStudentDelete = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlModifyStudent = new System.Windows.Forms.Panel();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
             this.tbImagePath = new System.Windows.Forms.TextBox();
             this.btnChooseImage = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@ namespace DataSmart.Presentation_Layer
             this.pbLogoModifyStudent = new System.Windows.Forms.PictureBox();
             this.btnChooseImage2 = new System.Windows.Forms.Button();
             this.tbImagePath2 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.pnlModifyStudent.SuspendLayout();
             this.pnlAddStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoAddStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).BeginInit();
@@ -135,36 +135,36 @@ namespace DataSmart.Presentation_Layer
             this.btnStudentDelete.UseVisualStyleBackColor = false;
             this.btnStudentDelete.Click += new System.EventHandler(this.btnStudentDelete_Click);
             // 
-            // panel1
+            // pnlModifyStudent
             // 
-            this.panel1.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pnlAddStudent);
-            this.panel1.Controls.Add(this.lblStudentImage2);
-            this.panel1.Controls.Add(this.dtpDOB2);
-            this.panel1.Controls.Add(this.cbGender2);
-            this.panel1.Controls.Add(this.tbAddress2);
-            this.panel1.Controls.Add(this.tbPhoneNumber2);
-            this.panel1.Controls.Add(this.tbStudentNumber2);
-            this.panel1.Controls.Add(this.tbLastName2);
-            this.panel1.Controls.Add(this.tbMiddleName2);
-            this.panel1.Controls.Add(this.tbStudentFirstName2);
-            this.panel1.Controls.Add(this.lblStudentFName2);
-            this.panel1.Controls.Add(this.lblStudentMName2);
-            this.panel1.Controls.Add(this.lblStudentLastName2);
-            this.panel1.Controls.Add(this.lblDOB2);
-            this.panel1.Controls.Add(this.llblGender2);
-            this.panel1.Controls.Add(this.lblPhoneNumber2);
-            this.panel1.Controls.Add(this.lblAddress2);
-            this.panel1.Controls.Add(this.lblStudentNumber2);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.pbLogoModifyStudent);
-            this.panel1.Controls.Add(this.btnChooseImage2);
-            this.panel1.Controls.Add(this.tbImagePath2);
-            this.panel1.Location = new System.Drawing.Point(0, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 407);
-            this.panel1.TabIndex = 25;
+            this.pnlModifyStudent.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
+            this.pnlModifyStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlModifyStudent.Controls.Add(this.pnlAddStudent);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentImage2);
+            this.pnlModifyStudent.Controls.Add(this.dtpDOB2);
+            this.pnlModifyStudent.Controls.Add(this.cbGender2);
+            this.pnlModifyStudent.Controls.Add(this.tbAddress2);
+            this.pnlModifyStudent.Controls.Add(this.tbPhoneNumber2);
+            this.pnlModifyStudent.Controls.Add(this.tbStudentNumber2);
+            this.pnlModifyStudent.Controls.Add(this.tbLastName2);
+            this.pnlModifyStudent.Controls.Add(this.tbMiddleName2);
+            this.pnlModifyStudent.Controls.Add(this.tbStudentFirstName2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentFName2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentMName2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentLastName2);
+            this.pnlModifyStudent.Controls.Add(this.lblDOB2);
+            this.pnlModifyStudent.Controls.Add(this.llblGender2);
+            this.pnlModifyStudent.Controls.Add(this.lblPhoneNumber2);
+            this.pnlModifyStudent.Controls.Add(this.lblAddress2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentNumber2);
+            this.pnlModifyStudent.Controls.Add(this.label10);
+            this.pnlModifyStudent.Controls.Add(this.pbLogoModifyStudent);
+            this.pnlModifyStudent.Controls.Add(this.btnChooseImage2);
+            this.pnlModifyStudent.Controls.Add(this.tbImagePath2);
+            this.pnlModifyStudent.Location = new System.Drawing.Point(0, 2);
+            this.pnlModifyStudent.Name = "pnlModifyStudent";
+            this.pnlModifyStudent.Size = new System.Drawing.Size(746, 407);
+            this.pnlModifyStudent.TabIndex = 25;
             // 
             // pnlAddStudent
             // 
@@ -603,15 +603,15 @@ namespace DataSmart.Presentation_Layer
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 467);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlModifyStudent);
             this.Controls.Add(this.btnStudentDelete);
             this.Controls.Add(this.btnStudentUpdate);
             this.Controls.Add(this.btnStudentAdd);
             this.Controls.Add(this.btnStudentBack);
             this.Name = "frmStudent";
             this.Text = "Student";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlModifyStudent.ResumeLayout(false);
+            this.pnlModifyStudent.PerformLayout();
             this.pnlAddStudent.ResumeLayout(false);
             this.pnlAddStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoAddStudent)).EndInit();
@@ -625,8 +625,6 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Button btnStudentAdd;
         private System.Windows.Forms.Button btnStudentUpdate;
         private System.Windows.Forms.Button btnStudentDelete;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlAddStudent;
         private System.Windows.Forms.Label lblStudentImage;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.ComboBox cbGender;
@@ -669,5 +667,7 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.Button btnChooseImage;
         private System.Windows.Forms.TextBox tbImagePath2;
         private System.Windows.Forms.TextBox tbImagePath;
+        public System.Windows.Forms.Panel pnlModifyStudent;
+        public System.Windows.Forms.Panel pnlAddStudent;
     }
 }
