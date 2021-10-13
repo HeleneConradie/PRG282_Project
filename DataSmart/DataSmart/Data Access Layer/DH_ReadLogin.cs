@@ -15,7 +15,7 @@ namespace DataSmart.Data_Access_Layer
             try
             {
                 List<string> Users = new List<string>();
-                string path = @"TextFiles/UserLogin.txt";
+                string path = @"UserLogin.txt";
                 FileStream fStream = new FileStream(path, FileMode.Open, FileAccess.Read);
                 using (StreamReader sReader = new StreamReader(fStream))
                 {

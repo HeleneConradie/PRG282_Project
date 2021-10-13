@@ -80,7 +80,7 @@ namespace DataSmart.Business_Logic_Layer
 
         public int ValidationModule(string ModuleCode, string ModuleName, string ModuleDescription, string OnlineResources)
         {
-            Regex codevalidation = new Regex("^[a-zA-Z0-9]*$");
+            Regex codevalidation = new Regex("^[A-Z0-9]*$");
             Regex stringvalidation = new Regex("^[A-Z][a-zA-Z]*$");
 
             bool isValidCode = codevalidation.IsMatch(ModuleCode);
@@ -99,7 +99,7 @@ namespace DataSmart.Business_Logic_Layer
             {
                 return -1;
             }
-            return 2;
+            return -1;
         }
 
         public int DeleteValidation(string ModuleCode)

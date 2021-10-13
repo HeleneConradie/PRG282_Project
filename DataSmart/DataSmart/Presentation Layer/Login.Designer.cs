@@ -103,6 +103,7 @@ namespace DataSmart.Presentation_Layer
             this.btnExitLogin.TabIndex = 5;
             this.btnExitLogin.Text = "EXIT";
             this.btnExitLogin.UseVisualStyleBackColor = false;
+            this.btnExitLogin.Click += new System.EventHandler(this.btnExitLogin_Click);
             // 
             // lblPassword
             // 

@@ -13,8 +13,8 @@ namespace DataSmart.Data_Access_Layer
         {
             try
             {
-                string DetailPath = @"TextFiles/UserDetail.txt";
-                string LoginPath = @"TextFiles/UserLogin.txt";
+                string DetailPath = @"UserDetail.txt";
+                string LoginPath = @"UserLogin.txt";
                 FileStream fStream = new FileStream(LoginPath, FileMode.Append, FileAccess.Write);
                 using (StreamWriter sr = new StreamWriter(fStream))
                 {

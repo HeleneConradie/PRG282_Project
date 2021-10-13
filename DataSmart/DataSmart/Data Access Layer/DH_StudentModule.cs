@@ -21,14 +21,14 @@ namespace DataSmart.Data_Access_Layer
                 //Create list to display
                 List<StudentModule> AllModules = new List<StudentModule>();
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
-                string Query = "SELECT * FROM ModuleInformation";
+                string Query = "SELECT * FROM StudentModule WHERE StudentNumber = '" + stuNum + "'";
                 SqlCommand cmd = new SqlCommand(Query, connection);
                 SqlDataReader dr;
                 connection.Open();
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    AllModules.Add(new StudentModule(stuNum, dr.GetValue(0).ToString()));
+                    AllModules.Add(new StudentModule(dr.GetValue(1).ToString()));
                 }
                 connection.Close();
                 return AllModules;

@@ -60,5 +60,10 @@ namespace DataSmart.Presentation_Layer
         {
             tbPassword.PasswordChar = '•';
         }
+
+        private void btnExitLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

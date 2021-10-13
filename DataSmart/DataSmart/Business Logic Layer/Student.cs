@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -51,8 +52,10 @@ namespace DataSmart.Business_Logic_Layer
             this.StudentAddress = studentAddress;
         }
 
+
         public bool InsertStudentDetails(string num, string name, string middleName, string surname, Image img, string dob, string gender, string phone, string address)
         {
+
             bool Success = student.InsertStudent(num, name, middleName, surname, img, dob, gender, phone, address);
             if (Success == true)
             {
@@ -96,8 +99,8 @@ namespace DataSmart.Business_Logic_Layer
 
         public int ValidationStudent(string StuNumber, string StuFName, string StuMName, string StuLName, Image StuImage, string StuGender, string StuPhone, string StuAddress)
         {
-            Regex numvalidation = new Regex("^[a-zA-Z0-9]*$");
-            Regex stringvalidation = new Regex("^[A-Z][a-zA-Z]*$");
+            Regex numvalidation = new Regex("^[A-Z0-9]*$");
+            Regex stringvalidation = new Regex("^[a-zA-Z]*$");
             Regex addressvalidation = new Regex("^[0-9a-zA-Z]*$");
             Regex phonenumber = new Regex("^[+27|0][6-8][0-9]{7}$");
 
@@ -121,7 +124,7 @@ namespace DataSmart.Business_Logic_Layer
             {
                 return -1;
             }
-            return 2;
+            return -1;
         }
 
         public int DeleteValidation(string StuNumber)

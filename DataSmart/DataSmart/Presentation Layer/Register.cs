@@ -13,7 +13,7 @@ namespace DataSmart.Presentation_Layer
 {
     public partial class frmRegister : Form
     {
-        frmLogin login = new frmLogin();
+
         public frmRegister()
         {
             InitializeComponent();
@@ -57,6 +57,7 @@ namespace DataSmart.Presentation_Layer
 
         private void btnRegBack_Click(object sender, EventArgs e)
         {
+            frmLogin login = new frmLogin();
             login.Show();
             this.Hide();
         }

@@ -96,7 +96,7 @@ namespace DataSmart.Data_Access_Layer
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE ModuleInformation SET (OnlineResources = '" + OnResources + "') WHERE ModuleCode = '" + ModCode + "'";
+                string Query = "UPDATE ModuleInformation SET ModuleDescription = '" + ModDesc + "', OnlineResources = '" + OnResources + "' WHERE ModuleCode = '" + ModCode + "'";
                 SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
                 command.ExecuteNonQuery();

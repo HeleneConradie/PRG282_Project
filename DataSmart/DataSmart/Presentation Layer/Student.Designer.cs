@@ -33,7 +33,7 @@ namespace DataSmart.Presentation_Layer
             this.btnStudentAdd = new System.Windows.Forms.Button();
             this.btnStudentUpdate = new System.Windows.Forms.Button();
             this.btnStudentDelete = new System.Windows.Forms.Button();
-            this.pnlModifyStudent = new System.Windows.Forms.Panel();
+            this.ofdStudentImage = new System.Windows.Forms.OpenFileDialog();
             this.pnlAddStudent = new System.Windows.Forms.Panel();
             this.pbStudentImage = new System.Windows.Forms.PictureBox();
             this.btnChooseImage = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@ namespace DataSmart.Presentation_Layer
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.lblAddStudentHeading = new System.Windows.Forms.Label();
             this.pbLogoAddStudent = new System.Windows.Forms.PictureBox();
+            this.pnlModifyStudent = new System.Windows.Forms.Panel();
             this.lblStudentImage2 = new System.Windows.Forms.Label();
             this.dtpDOB2 = new System.Windows.Forms.DateTimePicker();
             this.cbGender2 = new System.Windows.Forms.ComboBox();
@@ -77,11 +78,10 @@ namespace DataSmart.Presentation_Layer
             this.pbLogoModifyStudent = new System.Windows.Forms.PictureBox();
             this.btnChooseImage2 = new System.Windows.Forms.Button();
             this.pbStudentImage2 = new System.Windows.Forms.PictureBox();
-            this.ofdStudentImage = new System.Windows.Forms.OpenFileDialog();
-            this.pnlModifyStudent.SuspendLayout();
             this.pnlAddStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoAddStudent)).BeginInit();
+            this.pnlModifyStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage2)).BeginInit();
             this.SuspendLayout();
@@ -138,35 +138,9 @@ namespace DataSmart.Presentation_Layer
             this.btnStudentDelete.UseVisualStyleBackColor = false;
             this.btnStudentDelete.Click += new System.EventHandler(this.btnStudentDelete_Click);
             // 
-            // pnlModifyStudent
+            // ofdStudentImage
             // 
-            this.pnlModifyStudent.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
-            this.pnlModifyStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlModifyStudent.Controls.Add(this.lblStudentImage2);
-            this.pnlModifyStudent.Controls.Add(this.dtpDOB2);
-            this.pnlModifyStudent.Controls.Add(this.cbGender2);
-            this.pnlModifyStudent.Controls.Add(this.tbAddress2);
-            this.pnlModifyStudent.Controls.Add(this.tbPhoneNumber2);
-            this.pnlModifyStudent.Controls.Add(this.tbStudentNumber2);
-            this.pnlModifyStudent.Controls.Add(this.tbLastName2);
-            this.pnlModifyStudent.Controls.Add(this.tbMiddleName2);
-            this.pnlModifyStudent.Controls.Add(this.tbStudentFirstName2);
-            this.pnlModifyStudent.Controls.Add(this.lblStudentFName2);
-            this.pnlModifyStudent.Controls.Add(this.lblStudentMName2);
-            this.pnlModifyStudent.Controls.Add(this.lblStudentLastName2);
-            this.pnlModifyStudent.Controls.Add(this.lblDOB2);
-            this.pnlModifyStudent.Controls.Add(this.llblGender2);
-            this.pnlModifyStudent.Controls.Add(this.lblPhoneNumber2);
-            this.pnlModifyStudent.Controls.Add(this.lblAddress2);
-            this.pnlModifyStudent.Controls.Add(this.lblStudentNumber2);
-            this.pnlModifyStudent.Controls.Add(this.label10);
-            this.pnlModifyStudent.Controls.Add(this.pbLogoModifyStudent);
-            this.pnlModifyStudent.Controls.Add(this.btnChooseImage2);
-            this.pnlModifyStudent.Controls.Add(this.pbStudentImage2);
-            this.pnlModifyStudent.Location = new System.Drawing.Point(0, 2);
-            this.pnlModifyStudent.Name = "pnlModifyStudent";
-            this.pnlModifyStudent.Size = new System.Drawing.Size(746, 407);
-            this.pnlModifyStudent.TabIndex = 25;
+            this.ofdStudentImage.FileName = "openFileDialog1";
             // 
             // pnlAddStudent
             // 
@@ -202,7 +176,8 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pbStudentImage.Location = new System.Drawing.Point(574, 194);
             this.pbStudentImage.Name = "pbStudentImage";
-            this.pbStudentImage.Size = new System.Drawing.Size(100, 50);
+            this.pbStudentImage.Size = new System.Drawing.Size(58, 54);
+            this.pbStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbStudentImage.TabIndex = 31;
             this.pbStudentImage.TabStop = false;
             // 
@@ -399,6 +374,36 @@ namespace DataSmart.Presentation_Layer
             this.pbLogoAddStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogoAddStudent.TabIndex = 0;
             this.pbLogoAddStudent.TabStop = false;
+            // 
+            // pnlModifyStudent
+            // 
+            this.pnlModifyStudent.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
+            this.pnlModifyStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlModifyStudent.Controls.Add(this.lblStudentImage2);
+            this.pnlModifyStudent.Controls.Add(this.dtpDOB2);
+            this.pnlModifyStudent.Controls.Add(this.cbGender2);
+            this.pnlModifyStudent.Controls.Add(this.tbAddress2);
+            this.pnlModifyStudent.Controls.Add(this.tbPhoneNumber2);
+            this.pnlModifyStudent.Controls.Add(this.tbStudentNumber2);
+            this.pnlModifyStudent.Controls.Add(this.tbLastName2);
+            this.pnlModifyStudent.Controls.Add(this.tbMiddleName2);
+            this.pnlModifyStudent.Controls.Add(this.tbStudentFirstName2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentFName2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentMName2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentLastName2);
+            this.pnlModifyStudent.Controls.Add(this.lblDOB2);
+            this.pnlModifyStudent.Controls.Add(this.llblGender2);
+            this.pnlModifyStudent.Controls.Add(this.lblPhoneNumber2);
+            this.pnlModifyStudent.Controls.Add(this.lblAddress2);
+            this.pnlModifyStudent.Controls.Add(this.lblStudentNumber2);
+            this.pnlModifyStudent.Controls.Add(this.label10);
+            this.pnlModifyStudent.Controls.Add(this.pbLogoModifyStudent);
+            this.pnlModifyStudent.Controls.Add(this.btnChooseImage2);
+            this.pnlModifyStudent.Controls.Add(this.pbStudentImage2);
+            this.pnlModifyStudent.Location = new System.Drawing.Point(0, 2);
+            this.pnlModifyStudent.Name = "pnlModifyStudent";
+            this.pnlModifyStudent.Size = new System.Drawing.Size(746, 407);
+            this.pnlModifyStudent.TabIndex = 25;
             // 
             // lblStudentImage2
             // 
@@ -602,10 +607,6 @@ namespace DataSmart.Presentation_Layer
             this.pbStudentImage2.TabIndex = 30;
             this.pbStudentImage2.TabStop = false;
             // 
-            // ofdStudentImage
-            // 
-            this.ofdStudentImage.FileName = "openFileDialog1";
-            // 
             // frmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,12 +621,12 @@ namespace DataSmart.Presentation_Layer
             this.Name = "frmStudent";
             this.Text = "Student";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStudent_FormClosing);
-            this.pnlModifyStudent.ResumeLayout(false);
-            this.pnlModifyStudent.PerformLayout();
             this.pnlAddStudent.ResumeLayout(false);
             this.pnlAddStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoAddStudent)).EndInit();
+            this.pnlModifyStudent.ResumeLayout(false);
+            this.pnlModifyStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoModifyStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentImage2)).EndInit();
             this.ResumeLayout(false);

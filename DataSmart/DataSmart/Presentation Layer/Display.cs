@@ -21,11 +21,13 @@ namespace DataSmart.Presentation_Layer
         }
 
         BindingSource source = new BindingSource();
+        BindingSource source2 = new BindingSource();
         Module mod = new Module();
         Student stu = new Student();
         frmMenu menuForm = new frmMenu();
         string TypeReceived;
         DataTable temp = new DataTable();
+
 
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -86,20 +88,10 @@ namespace DataSmart.Presentation_Layer
                     {
                         pbStudentImageShow.Image = Image.FromStream(memoryStream);
                     }
-                    //MemoryStream ms = new MemoryStream(bytes);
-                    //pbStudentImageShow.Image = Image.FromStream(ms);
-
-
-                    //if (row.Cells[5].Value != null)
-                    //{
-                    //    Byte[] imageData = new Byte[0];
-                    //    imageData = (Byte[])row.Cells[5].Value;
-                    //    MemoryStream ms = new MemoryStream(imageData);
-                    //    pbStudentImageShow.Image = Image.FromStream(ms);
-                    //}
-
-                    //string StudNumber = row.Cells[0].Value.ToString();
-                    //pbStudentImageShow.Image = row.Cells[5].Value as Image;
+                    string StudCode = row.Cells[0].Value.ToString();
+                    StudentModule stuMod = new StudentModule();
+                    source2.DataSource = stuMod.DisplayAll(StudCode);
+                    dgvDisplayModStud.DataSource = source2;
                 }
             }
             catch (Exception exc)

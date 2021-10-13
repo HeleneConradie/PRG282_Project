@@ -12,16 +12,15 @@ namespace DataSmart.Business_Logic_Layer
         DH_StudentModule writeStuMod = new DH_StudentModule();
         List<StudentModule> StudentModules = new List<StudentModule>();
 
-        string studentNumber;
         string modulecode;
 
-        public StudentModule(string studentNumber, string modulecode)
+        public StudentModule(string modulecode)
         {
-            this.StudentNumber = studentNumber;
             this.Modulecode = modulecode;
         }
 
-        public string StudentNumber { get => studentNumber; set => studentNumber = value; }
+        public StudentModule() { }
+
         public string Modulecode { get => modulecode; set => modulecode = value; }
     
         public List<StudentModule> DisplayAll(string stuNum)

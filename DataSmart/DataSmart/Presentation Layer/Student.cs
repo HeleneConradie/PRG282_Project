@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,29 +30,30 @@ namespace DataSmart.Presentation_Layer
 
         private void btnStudentAdd_Click(object sender, EventArgs e)
         {
+
             int Success = StudentClass.ValidationStudent(tbStudentNumber.Text,tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, pbStudentImage.Image,
                 cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
             if (Success == 0)
             {
-                MessageBox.Show("Error!", "All fields need to be filled!");
+                MessageBox.Show("All fields need to be filled!", "Error!");
             }
             if (Success == 1)
             {
-                MessageBox.Show("Error!", "Check the field lengths!");
+                MessageBox.Show("Check the field lengths!", "Error!");
             }
             if (Success == 2)
             {
-                MessageBox.Show("Error!", "Something went wrong. Please check that all fields are entered correctly!");
+                MessageBox.Show("Something went wrong. Please check that all fields are entered correctly!", "Error!");
             }
             if (Success == -1)
             {
                 bool Successful = StudentClass.InsertStudentDetails(tbStudentNumber.Text, tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, pbStudentImage.Image,
-                dtpDOB.Value.ToString() ,cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
+                dtpDOB.Value.ToString("yyyy'-'MM'-'dd") ,cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
                 if (Successful == false)
                 {
-                    MessageBox.Show("OOPS!", "Something went wrong!");
+                    MessageBox.Show("Something went wrong!", "OOPS!");
                 }
-                MessageBox.Show("Success!", "Student has been added successfully!");
+                MessageBox.Show("Student has been added successfully!", "Success!");
                 tbStudentNumber.Clear();
                 tbFirstName.Clear();
                 tbMiddleName.Clear();
@@ -69,25 +72,25 @@ namespace DataSmart.Presentation_Layer
                 cbGender2.Text, tbPhoneNumber2.Text, tbAddress2.Text);
             if (Success == 0)
             {
-                MessageBox.Show("Error!", "All fields need to be filled!");
+                MessageBox.Show("All fields need to be filled!", "Error!");
             }
             if (Success == 1)
             {
-                MessageBox.Show("Error!", "Check the field lengths!");
+                MessageBox.Show("Check the field lengths!", "Error!");
             }
             if (Success == 2)
             {
-                MessageBox.Show("Error!", "Something went wrong. Please check that all fields are entered correctly!");
+                MessageBox.Show("Something went wrong. Please check that all fields are entered correctly!", "Error!");
             }
             if (Success == -1)
             {
                 bool Successful = StudentClass.UpdateStudentInformation(tbStudentNumber2.Text, tbStudentFirstName2.Text, tbMiddleName2.Text, tbLastName2.Text, pbStudentImage2.Image,
-                dtpDOB2.Value.ToString(), cbGender2.Text, tbPhoneNumber2.Text, tbAddress2.Text);
+                dtpDOB2.Value.ToString("yyyy'-'MM'-'dd"), cbGender2.Text, tbPhoneNumber2.Text, tbAddress2.Text);
                 if (Successful == false)
                 {
-                    MessageBox.Show("OOPS!", "Something went wrong!");
+                    MessageBox.Show("Something went wrong!", "OOPS!");
                 }
-                MessageBox.Show("Success!", "Student has been updated successfully!");
+                MessageBox.Show("Student has been updated successfully!", "Success!");
                 tbStudentNumber.Clear();
                 tbFirstName.Clear();
                 tbMiddleName.Clear();
@@ -105,24 +108,24 @@ namespace DataSmart.Presentation_Layer
             int Success = StudentClass.DeleteValidation(tbStudentNumber2.Text);
             if (Success == 0)
             {
-                MessageBox.Show("Error!", "Student Number field needs to be filled!");
+                MessageBox.Show("Student Number field needs to be filled!", "Error!");
             }
             if (Success == 1)
             {
-                MessageBox.Show("Error!", "Check the Student Number field length!");
+                MessageBox.Show("Check the Student Number field length!", "Error!");
             }
             if (Success == 2)
             {
-                MessageBox.Show("Error!", "Something went wrong. Please check that the field is entered correctly!");
+                MessageBox.Show("Something went wrong. Please check that the field is entered correctly!", "Error!");
             }
             if (Success == -1)
             {
                 bool Successful = StudentClass.DeleteStudentDetails(tbStudentNumber2.Text);
                 if (Successful == false)
                 {
-                    MessageBox.Show("OOPS!", "Something went wrong!");
+                    MessageBox.Show("Something went wrong!", "OOPS!");
                 }
-                MessageBox.Show("Success!", "Student has been deleted successfully!");
+                MessageBox.Show("Student has been deleted successfully!", "Success!");
                 tbStudentNumber.Clear();
                 tbStudentNumber.Focus();
             }
@@ -130,7 +133,6 @@ namespace DataSmart.Presentation_Layer
 
         private void btnChooseImage_Click(object sender, EventArgs e)
         {
-            ofdStudentImage.OpenFile();
             ofdStudentImage.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp) | *.jpg; *.jpeg; *.gif; *.bmp;";
             if (ofdStudentImage.ShowDialog() == DialogResult.OK)
             {
@@ -140,7 +142,6 @@ namespace DataSmart.Presentation_Layer
 
         private void btnChooseImage2_Click(object sender, EventArgs e)
         {
-            ofdStudentImage.OpenFile();
             ofdStudentImage.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp) | *.jpg; *.jpeg; *.gif; *.bmp;";
             if (ofdStudentImage.ShowDialog() == DialogResult.OK)
             {

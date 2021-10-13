@@ -9,6 +9,7 @@ using DataSmart.Business_Logic_Layer;
 using System.Drawing;
 using System.IO;
 using System.Data;
+using System.Drawing.Imaging;
 
 namespace DataSmart.Data_Access_Layer
 {
@@ -64,11 +65,19 @@ namespace DataSmart.Data_Access_Layer
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = string.Format(@"INSERT INTO StudentInformation(StudentNumber, StudentFirtsName, StudentMiddleName, StudentLastName, StudentImage, StudentDateOfBirth, StudentGender, StudentPhone, StudentAddress) 
-                    Values ('" + StuNum + "', '" + StuName + "', '" + middleName + "', '" + StuSurname + "', '" + StuImage + "', '" + StuDOB + "', '" + StuGender + "', '" + Phone + "', '" + StuAddress + "')");
-                SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
-                command.ExecuteNonQuery();
+                string Query = string.Format(@"INSERT INTO StudentInformation(StudentNumber, StudentFirstName, StudentMiddleName, StudentLastName, StudentImage, StudentDateOfBirth, StudentGender, StudentPhone, StudentAddress) 
+                    Values ('" + StuNum + "', '" + StuName + "', '" + middleName + "', '" + StuSurname + "', @P_Image, '" + StuDOB + "', '" + StuGender + "', '" + Phone + "', '" + StuAddress + "')");
+                using (SqlCommand command = new SqlCommand(Query, con))
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuImage.Save(ms, ImageFormat.Jpeg);
+                    byte[] photo_aray = new byte[ms.Length];
+                    ms.Position = 0;
+                    ms.Read(photo_aray, 0, photo_aray.Length);
+                    command.Parameters.AddWithValue("@P_Image", photo_aray);
+                    command.ExecuteNonQuery();
+                }
                 con.Close();
                 return true;
             }
@@ -87,11 +96,19 @@ namespace DataSmart.Data_Access_Layer
             try
             {
                 SqlConnection con = new SqlConnection(dbHandler.connect);
-                string Query = "UPDATE StudentInformation SET (StudentFirstName = '" + StuName + "', StudentMiddleName = '" + StuMiddleName + "', StudentLastName = '" + StuSurname + "', StudentImage = '" + StuImage + "', StudentDateOfBirth = '" + StuDOB + "'" +
-                    ", StudentGender = '" + StuGender + "', StudentPhone = '" + Phone + "', StudentAddress = '" + StuAddress + "') WHERE StudentNumber = '" + StuNum + "'";
-                SqlCommand command = new SqlCommand(Query, con);
                 con.Open();
-                command.ExecuteNonQuery();
+                string Query = "UPDATE StudentInformation SET StudentFirstName = '" + StuName + "', StudentMiddleName = '" + StuMiddleName + "', StudentLastName = '" + StuSurname + "', StudentImage = @P_Image, StudentDateOfBirth = '" + StuDOB + "'" +
+                    ", StudentGender = '" + StuGender + "', StudentPhone = '" + Phone + "', StudentAddress = '" + StuAddress + "' WHERE StudentNumber = '" + StuNum + "'";
+                using (SqlCommand command = new SqlCommand(Query, con))
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuImage.Save(ms, ImageFormat.Jpeg);
+                    byte[] photo_aray = new byte[ms.Length];
+                    ms.Position = 0;
+                    ms.Read(photo_aray, 0, photo_aray.Length);
+                    command.Parameters.AddWithValue("@P_Image", photo_aray);
+                    command.ExecuteNonQuery();
+                }
                 con.Close();
                 return true;
             }
