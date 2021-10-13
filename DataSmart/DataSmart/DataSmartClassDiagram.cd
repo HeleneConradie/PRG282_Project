@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DataSmart.Business_Logic_Layer.ExceptionHandling" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business Logic Layer\ExceptionHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Business_Logic_Layer.Login" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business Logic Layer\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Business_Logic_Layer.Module" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAAAAAAgAAABEBAQQBAAAAgCgAIAAQAgCAg=</HashCode>
+      <FileName>Business Logic Layer\Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Business_Logic_Layer.RegisterUser" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business Logic Layer\RegisterUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Business_Logic_Layer.Student" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKoABAACAAAAAGBgAAAgASAAAAAgACAAgAAoAQChgAU=</HashCode>
+      <FileName>Business Logic Layer\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Business_Logic_Layer.StudentModule" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAwAAAAAEAAAABABIAAAAAAAA=</HashCode>
+      <FileName>Business Logic Layer\StudentModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Data_Access_Layer.DH_DatabaseConnection" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAEAAAAgAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Access Layer\DH_DatabaseConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Data_Access_Layer.DH_Module" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAEgACAAAAAAAAAAAAAAAgAAAECAA=</HashCode>
+      <FileName>Data Access Layer\DH_Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Data_Access_Layer.DH_Student" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBAAAEAAAAEAAAAAQCAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Data Access Layer\DH_Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Data_Access_Layer.DH_StudentModule" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAABAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Access Layer\DH_StudentModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Data_Access_Layer.DH_TextFiles" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Data Access Layer\DH_TextFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Presentation_Layer.frmDisplay" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQAABCWAAIAKgAACCBAACAAIEQCCgCACABAAAAAI=</HashCode>
+      <FileName>Presentation Layer\Display.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Presentation_Layer.frmLogin" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAAAQAAAKAABkiAEAACQAAAkAAAQBkBEA=</HashCode>
+      <FileName>Presentation Layer\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Presentation_Layer.frmMenu" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAEACAAQADIIBCAAABCAAAAAAwAAAAIAAAAAAA=</HashCode>
+      <FileName>Presentation Layer\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Presentation_Layer.frmModule" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABAAQANCIAoECAAACAAJAeRAQgAAgUAAEAAARBCAg=</HashCode>
+      <FileName>Presentation Layer\Module.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Presentation_Layer.frmRegister" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBBAAkABWAEACQAAACEAgkCAkAAAQAAAgYAAAJkLMg=</HashCode>
+      <FileName>Presentation Layer\Register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Presentation_Layer.frmStudent" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>mCAoWQWQAaAEEIKkACCAQKACQgyCAAwkiIIQASDALAA=</HashCode>
+      <FileName>Presentation Layer\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Program" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAABAAAEAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSmart.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
