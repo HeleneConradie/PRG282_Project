@@ -28,7 +28,7 @@ namespace DataSmart.Presentation_Layer
 
         private void btnStudentAdd_Click(object sender, EventArgs e)
         {
-            int Success = StudentClass.ValidationStudent(tbStudentNumber.Text,tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, tbImagePath,
+            int Success = StudentClass.ValidationStudent(tbStudentNumber.Text,tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, pbStudentImage.Image,
                 cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
             if (Success == 0)
             {
@@ -44,8 +44,8 @@ namespace DataSmart.Presentation_Layer
             }
             if (Success == -1)
             {
-                //bool Successful = StudentClass.InsertStudentDetails(tbStudentNumber.Text, tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, tbImagePath,
-                //cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
+                bool Successful = StudentClass.InsertStudentDetails(tbStudentNumber.Text, tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, pbStudentImage.Image,
+                dtpDOB.Value.ToString() ,cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
                 if (Successful == false)
                 {
                     MessageBox.Show("OOPS!", "Something went wrong!");
@@ -55,7 +55,7 @@ namespace DataSmart.Presentation_Layer
                 tbFirstName.Clear();
                 tbMiddleName.Clear();
                 tbLastName.Clear();
-                tbImagePath.Clear();
+                pbStudentImage.Image = null;
                 cbGender.SelectedIndex = -1;
                 tbPhoneNumber.Clear();
                 tbAddress.Clear();
@@ -65,8 +65,8 @@ namespace DataSmart.Presentation_Layer
 
         private void btnStudentUpdate_Click(object sender, EventArgs e)
         {
-            int Success = StudentClass.ValidationStudent(tbStudentNumber.Text, tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, tbImagePath,
-                cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
+            int Success = StudentClass.ValidationStudent(tbStudentNumber2.Text, tbStudentFirstName2.Text, tbMiddleName2.Text, tbLastName2.Text, pbStudentImage2.Image,
+                cbGender2.Text, tbPhoneNumber2.Text, tbAddress2.Text);
             if (Success == 0)
             {
                 MessageBox.Show("Error!", "All fields need to be filled!");
@@ -81,8 +81,8 @@ namespace DataSmart.Presentation_Layer
             }
             if (Success == -1)
             {
-                //bool Successful = StudentClass.UpdateStudentInformation(tbStudentNumber.Text, tbFirstName.Text, tbMiddleName.Text, tbLastName.Text, tbImagePath,
-                //cbGender.Text, tbPhoneNumber.Text, tbAddress.Text);
+                bool Successful = StudentClass.UpdateStudentInformation(tbStudentNumber2.Text, tbStudentFirstName2.Text, tbMiddleName2.Text, tbLastName2.Text, pbStudentImage2.Image,
+                dtpDOB2.Value.ToString(), cbGender2.Text, tbPhoneNumber2.Text, tbAddress2.Text);
                 if (Successful == false)
                 {
                     MessageBox.Show("OOPS!", "Something went wrong!");
@@ -92,7 +92,7 @@ namespace DataSmart.Presentation_Layer
                 tbFirstName.Clear();
                 tbMiddleName.Clear();
                 tbLastName.Clear();
-                tbImagePath.Clear();
+                pbStudentImage2.Image = null;
                 cbGender.SelectedIndex = -1;
                 tbPhoneNumber.Clear();
                 tbAddress.Clear();
@@ -102,7 +102,7 @@ namespace DataSmart.Presentation_Layer
 
         private void btnStudentDelete_Click(object sender, EventArgs e)
         {
-            int Success = StudentClass.DeleteValidation(tbStudentNumber.Text);
+            int Success = StudentClass.DeleteValidation(tbStudentNumber2.Text);
             if (Success == 0)
             {
                 MessageBox.Show("Error!", "Student Number field needs to be filled!");
@@ -117,7 +117,7 @@ namespace DataSmart.Presentation_Layer
             }
             if (Success == -1)
             {
-                bool Successful = StudentClass.DeleteStudentDetails(tbStudentNumber.Text);
+                bool Successful = StudentClass.DeleteStudentDetails(tbStudentNumber2.Text);
                 if (Successful == false)
                 {
                     MessageBox.Show("OOPS!", "Something went wrong!");
@@ -126,6 +126,31 @@ namespace DataSmart.Presentation_Layer
                 tbStudentNumber.Clear();
                 tbStudentNumber.Focus();
             }
+        }
+
+        private void btnChooseImage_Click(object sender, EventArgs e)
+        {
+            ofdStudentImage.OpenFile();
+            ofdStudentImage.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp) | *.jpg; *.jpeg; *.gif; *.bmp;";
+            if (ofdStudentImage.ShowDialog() == DialogResult.OK)
+            {
+                pbStudentImage.Image = new Bitmap(ofdStudentImage.FileName);
+            }
+        }
+
+        private void btnChooseImage2_Click(object sender, EventArgs e)
+        {
+            ofdStudentImage.OpenFile();
+            ofdStudentImage.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp) | *.jpg; *.jpeg; *.gif; *.bmp;";
+            if (ofdStudentImage.ShowDialog() == DialogResult.OK)
+            {
+                pbStudentImage2.Image = new Bitmap(ofdStudentImage.FileName);
+            }
+        }
+
+        private void frmStudent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

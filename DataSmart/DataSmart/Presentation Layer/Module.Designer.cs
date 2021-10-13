@@ -117,7 +117,6 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pnlModifyModule.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlModifyModule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlModifyModule.Controls.Add(this.pnlAddModule);
             this.pnlModifyModule.Controls.Add(this.tbModName2);
             this.pnlModifyModule.Controls.Add(this.lblModuleName2);
             this.pnlModifyModule.Controls.Add(this.tbOnlineRes2);
@@ -343,7 +342,8 @@ namespace DataSmart.Presentation_Layer
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(746, 307);
+            this.ClientSize = new System.Drawing.Size(746, 309);
+            this.Controls.Add(this.pnlAddModule);
             this.Controls.Add(this.btnModDelete);
             this.Controls.Add(this.btnModUpdate);
             this.Controls.Add(this.btnModAdd);
@@ -351,6 +351,7 @@ namespace DataSmart.Presentation_Layer
             this.Controls.Add(this.pnlModifyModule);
             this.Name = "frmModule";
             this.Text = "Module";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmModule_FormClosing);
             this.pnlModifyModule.ResumeLayout(false);
             this.pnlModifyModule.PerformLayout();
             this.pnlAddModule.ResumeLayout(false);

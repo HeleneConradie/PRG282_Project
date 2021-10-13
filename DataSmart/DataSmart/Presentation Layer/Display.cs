@@ -82,5 +82,10 @@ namespace DataSmart.Presentation_Layer
             source.DataSource = stu.DisplayAllStudents();
             dgvDisplay.DataSource = source;
         }
+
+        private void frmDisplay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

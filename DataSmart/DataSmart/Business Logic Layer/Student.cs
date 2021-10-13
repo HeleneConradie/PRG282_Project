@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace DataSmart.Business_Logic_Layer
     class Student
     {
         DH_Student student = new DH_Student();
-        List<Student> Students = new List<Student>();
+        DataTable dataTableTemp = new DataTable();
 
         string studentnumber;
         string studentName;
@@ -70,33 +71,17 @@ namespace DataSmart.Business_Logic_Layer
             return false;
         }
 
-        public List<Student> DisplayAllStudents()
+        public DataTable DisplayAllStudents()
         {
-            Students.AddRange(student.ReadAll());
-            return Students;
+            dataTableTemp = student.ReadAll();
+            return dataTableTemp;
         }
 
-        //public Image ConvertToImage(string stringImage)
-        //{
-        //    byte[] Bytes = Convert.FromBase64String(stringImage);
-        //    MemoryStream memoryStream = new MemoryStream(Bytes);
-        //    Image StudImage = Image.FromStream(memoryStream, true, true);
-        //    return StudImage;
-        //}
 
-        public string DisplaySearchedStudent(string StudentID)
+        public DataTable DisplaySearchedStudent(string StudentID)
         {
-            string FoundStudent = student.ReadStudent(StudentID);
-            if (FoundStudent != null)
-            {
-                object[] StudentContent = FoundStudent.Split('#');
-                //Image[] Image = new Image[1];
-                //Image[0] = ConvertToImage(StudentContent[4].ToString());
-
-                Students.Add(new Student(StudentContent[0].ToString(), StudentContent[1].ToString(), StudentContent[2].ToString(), StudentContent[3].ToString(), /*Image[0]*/ StudentContent[5].ToString(), StudentContent[6].ToString(), StudentContent[7].ToString(), StudentContent[8].ToString()));
-                //return Students;
-            }
-            return null;
+            dataTableTemp = student.ReadStudent(StudentID);
+            return dataTableTemp;
         }
 
         public bool UpdateStudentInformation(string StudNum, string StuName, string StuMiddleName, string StuSurname, Image StuImage, string DOB, string Gender, string Phone, string Address)
@@ -109,7 +94,7 @@ namespace DataSmart.Business_Logic_Layer
             return false;
         }
 
-        public int ValidationStudent(string StuNumber, string StuFName, string StuMName, string StuLName, string StuImage, string StuGender, string StuPhone, string StuAddress)
+        public int ValidationStudent(string StuNumber, string StuFName, string StuMName, string StuLName, Image StuImage, string StuGender, string StuPhone, string StuAddress)
         {
             Regex numvalidation = new Regex("^[a-zA-Z0-9]*$");
             Regex stringvalidation = new Regex("^[A-Z][a-zA-Z]*$");

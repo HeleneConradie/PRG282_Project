@@ -48,8 +48,11 @@ namespace DataSmart.Presentation_Layer
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblRegisterHeading = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
             this.pbShowPass = new System.Windows.Forms.PictureBox();
             this.pbShowCon = new System.Windows.Forms.PictureBox();
+=======
+>>>>>>> Stashed changes
             this.pnlRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).BeginInit();
@@ -265,6 +268,7 @@ namespace DataSmart.Presentation_Layer
             this.lblRegisterHeading.TabIndex = 0;
             this.lblRegisterHeading.Text = "Register";
             // 
+<<<<<<< Updated upstream
             // pbShowPass
             // 
             this.pbShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -289,6 +293,8 @@ namespace DataSmart.Presentation_Layer
             this.pbShowCon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbShowCon_MouseDown);
             this.pbShowCon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbShowCon_MouseUp);
             // 
+=======
+>>>>>>> Stashed changes
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +305,7 @@ namespace DataSmart.Presentation_Layer
             this.Controls.Add(this.btnRegBack);
             this.Name = "frmRegister";
             this.Text = "Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRegister_FormClosing);
             this.pnlRegister.ResumeLayout(false);
             this.pnlRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).EndInit();

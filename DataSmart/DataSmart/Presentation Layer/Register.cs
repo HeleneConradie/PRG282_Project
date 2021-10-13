@@ -61,6 +61,7 @@ namespace DataSmart.Presentation_Layer
             this.Hide();
         }
 
+<<<<<<< Updated upstream
         private void pbShowPass_MouseDown(object sender, MouseEventArgs e)
         {
             tbPassword.PasswordChar = '\0';
@@ -95,6 +96,11 @@ namespace DataSmart.Presentation_Layer
         {
             string UserName = tbName.Text + tbSurname.Text;
             tbUsername.Text = UserName;
+=======
+        private void frmRegister_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+>>>>>>> Stashed changes
         }
     }
 }

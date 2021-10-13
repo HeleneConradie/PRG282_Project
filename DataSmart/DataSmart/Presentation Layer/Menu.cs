@@ -17,12 +17,12 @@ namespace DataSmart.Presentation_Layer
             InitializeComponent();
         }
 
-
-        frmModule moduleForm = new frmModule();
-        frmDisplay displayForm = new frmDisplay();
-        frmStudent studentForm = new frmStudent();
         private void btnContinue_Click(object sender, EventArgs e)
         {
+            frmModule moduleForm = new frmModule();
+            frmDisplay displayForm = new frmDisplay();
+            frmStudent studentForm = new frmStudent();
+
             if (rbtnModule.Checked == true)
             {
                 if (rbtnModify.Checked == true)
@@ -52,7 +52,6 @@ namespace DataSmart.Presentation_Layer
                 }
                 else MessageBox.Show("Please choose an option");               
             }
-            else MessageBox.Show("Please choose an option");
             if (rbtnStudent.Checked == true)
             {
                 if (rbtnModify.Checked == true)
@@ -82,7 +81,11 @@ namespace DataSmart.Presentation_Layer
                 }
                 else MessageBox.Show("Please choose an option");
             }
-            else MessageBox.Show("Please choose an option");
+        }
+
+        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

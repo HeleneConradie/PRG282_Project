@@ -117,5 +117,9 @@ namespace DataSmart.Presentation_Layer
             }
         }
 
+        private void frmModule_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

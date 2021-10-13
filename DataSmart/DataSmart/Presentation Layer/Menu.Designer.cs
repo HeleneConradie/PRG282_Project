@@ -196,6 +196,7 @@ namespace DataSmart.Presentation_Layer
             this.Controls.Add(this.pnlBackMenu);
             this.Name = "frmMenu";
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
             this.pnlBackMenu.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             this.gbOption.ResumeLayout(false);

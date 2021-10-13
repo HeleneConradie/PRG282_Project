@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DataSmart.Business_Logic_Layer;
 using System.Drawing;
 using System.IO;
+using System.Data;
 
 namespace DataSmart.Data_Access_Layer
 {
@@ -15,43 +16,18 @@ namespace DataSmart.Data_Access_Layer
     {
         DH_DatabaseConnection dbHandler = new DH_DatabaseConnection();
 
-        public Image ConvertToImage(string stringImage)
-        {
-            byte[] Bytes = Convert.FromBase64String(stringImage);
-            MemoryStream memoryStream = new MemoryStream(Bytes);
-            Image StudImage = Image.FromStream(memoryStream, true, true);
-            return StudImage;
-        }
-
         #region Read Methods
-        public List<Student> ReadAll()
+        public DataTable ReadAll()
         {
             try
             {
-                List<Student> AllStudents = new List<Student>();
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
                 string Query = "SELECT * FROM StudentInformation";
                 SqlCommand cmd = new SqlCommand(Query, connection);
-                SqlDataReader dr;
-                connection.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    AllStudents.Add(new Student(
-                        dr.GetValue(0).ToString(),
-                        dr.GetValue(1).ToString(),
-                        dr.GetValue(2).ToString(),
-                        dr.GetValue(3).ToString(),
-                        //dr.GetValue(4),
-                        //Needs to be converted to Image type
-                        dr.GetValue(5).ToString(),
-                        dr.GetValue(6).ToString(),
-                        dr.GetValue(7).ToString(),
-                        dr.GetValue(5).ToString()
-                        ));
-                }
-                connection.Close();
-                return AllStudents;
+                SqlDataAdapter sqlDAdpt = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sqlDAdpt.Fill(dt);
+                return dt;
             }
             catch (SqlException SqlEx)
             {
@@ -60,23 +36,17 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        public string ReadStudent(string StudentNumber)
+        public DataTable ReadStudent(string StudentNumber)
         {
-            string value = "";
             try
             {
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
                 string Query = "SELECT * FROM StudentInformation WHERE StudentNumber ='" + StudentNumber + "'";
                 SqlCommand cmd = new SqlCommand(Query, connection);
-                SqlDataReader dr;
-                connection.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    value = StudentNumber + "#" + dr.GetValue(1) + "#" + dr.GetValue(2) + "#" + dr.GetValue(3) + "#" + dr.GetValue(4) + "#" + dr.GetValue(5) + "#" + dr.GetValue(6) + "#" + dr.GetValue(7) + "#" + dr.GetValue(8);
-                }
-                connection.Close();
-                return value;
+                SqlDataAdapter sqlDAdpt = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sqlDAdpt.Fill(dt);
+                return dt;
             }
             catch (SqlException sqlEx)
             {
@@ -154,6 +124,30 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
+        #endregion
+
+        #region Student Read Image Method
+
+        public MemoryStream ReadImageFromDatabase(string StuNum)
+        {
+            System.Drawing.Image image = null;
+            int i = 0;
+            using (SqlConnection sqlConnection = new SqlConnection(dbHandler.connect))
+            {
+                sqlConnection.Open();
+                string queryImage = "SELECT StudentImage FROM StudentInformation WHERE StudentNumber = '" + StuNum + "'";
+                SqlCommand sqlcmd = new SqlCommand(queryImage, sqlConnection);
+                SqlDataAdapter dataAdpt = new SqlDataAdapter(sqlcmd);
+                DataSet dataSet = new DataSet();
+                dataAdpt.Fill(dataSet);
+                if (dataSet.Tables[0].Rows.Count > 0)
+                {
+                    MemoryStream ms = new MemoryStream((byte[])dataSet.Tables[0].Rows[0]["StudentImage"]);
+                    return ms;
+                }
+                else return null;
+            }
+        }
         #endregion
     }
 }
