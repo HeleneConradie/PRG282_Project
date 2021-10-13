@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataSmart.Business_Logic_Layer
 {
-    class ExceptionHandling
+    class ExceptionHandling : Exception
     {
+        public ExceptionHandling(string Message) : base(Message)
+        {
+
+        }
     }
 }
