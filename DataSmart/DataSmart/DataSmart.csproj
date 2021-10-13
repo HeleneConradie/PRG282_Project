@@ -143,5 +143,11 @@
   <ItemGroup>
     <None Include="Resources\DataSmart_Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible-eye1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

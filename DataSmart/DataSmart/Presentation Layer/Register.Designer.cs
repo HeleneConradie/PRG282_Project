@@ -32,6 +32,8 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnRegBack = new System.Windows.Forms.Button();
             this.pnlRegister = new System.Windows.Forms.Panel();
+            this.pbConShow = new System.Windows.Forms.PictureBox();
+            this.pbShowPassword = new System.Windows.Forms.PictureBox();
             this.cbCampus = new System.Windows.Forms.ComboBox();
             this.pbLogoReigster = new System.Windows.Forms.PictureBox();
             this.lblConPass = new System.Windows.Forms.Label();
@@ -49,9 +51,9 @@ namespace DataSmart.Presentation_Layer
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblRegisterHeading = new System.Windows.Forms.Label();
             this.pnlRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShowCon)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -84,8 +86,8 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pnlRegister.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlRegister.Controls.Add(this.pbShowCon);
-            this.pnlRegister.Controls.Add(this.pbShowPass);
+            this.pnlRegister.Controls.Add(this.pbConShow);
+            this.pnlRegister.Controls.Add(this.pbShowPassword);
             this.pnlRegister.Controls.Add(this.cbCampus);
             this.pnlRegister.Controls.Add(this.pbLogoReigster);
             this.pnlRegister.Controls.Add(this.lblConPass);
@@ -106,6 +108,34 @@ namespace DataSmart.Presentation_Layer
             this.pnlRegister.Name = "pnlRegister";
             this.pnlRegister.Size = new System.Drawing.Size(746, 249);
             this.pnlRegister.TabIndex = 12;
+            // 
+            // pbConShow
+            // 
+            this.pbConShow.BackColor = System.Drawing.Color.Transparent;
+            this.pbConShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbConShow.Image = global::DataSmart.Properties.Resources.visible_eye1;
+            this.pbConShow.Location = new System.Drawing.Point(542, 198);
+            this.pbConShow.Name = "pbConShow";
+            this.pbConShow.Size = new System.Drawing.Size(22, 20);
+            this.pbConShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbConShow.TabIndex = 20;
+            this.pbConShow.TabStop = false;
+            this.pbConShow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pbConShow.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbConShow_MouseUp);
+            // 
+            // pbShowPassword
+            // 
+            this.pbShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.pbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowPassword.Image = global::DataSmart.Properties.Resources.visible_eye1;
+            this.pbShowPassword.Location = new System.Drawing.Point(542, 172);
+            this.pbShowPassword.Name = "pbShowPassword";
+            this.pbShowPassword.Size = new System.Drawing.Size(22, 20);
+            this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowPassword.TabIndex = 19;
+            this.pbShowPassword.TabStop = false;
+            this.pbShowPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbShowPassword_MouseDown);
+            this.pbShowPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbShowPassword_MouseUp);
             // 
             // cbCampus
             // 
@@ -146,6 +176,7 @@ namespace DataSmart.Presentation_Layer
             this.tbConPass.Name = "tbConPass";
             this.tbConPass.Size = new System.Drawing.Size(153, 20);
             this.tbConPass.TabIndex = 15;
+            this.tbConPass.TextChanged += new System.EventHandler(this.tbConPass_TextChanged);
             // 
             // lblPassword
             // 
@@ -160,10 +191,12 @@ namespace DataSmart.Presentation_Layer
             // 
             // tbPassword
             // 
+            this.tbPassword.BackColor = System.Drawing.SystemColors.Control;
             this.tbPassword.Location = new System.Drawing.Point(410, 172);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(153, 20);
             this.tbPassword.TabIndex = 13;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // lblUsername
             // 
@@ -272,9 +305,9 @@ namespace DataSmart.Presentation_Layer
             this.Text = "Register";
             this.pnlRegister.ResumeLayout(false);
             this.pnlRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbShowCon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +335,7 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.ComboBox cbCampus;
         private System.Windows.Forms.PictureBox pbShowCon;
         private System.Windows.Forms.PictureBox pbShowPass;
+        private System.Windows.Forms.PictureBox pbConShow;
+        private System.Windows.Forms.PictureBox pbShowPassword;
     }
 }

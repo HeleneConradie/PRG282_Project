@@ -80,9 +80,10 @@ namespace DataSmart.Presentation_Layer
             // pbShowPassword
             // 
             this.pbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbShowPassword.Location = new System.Drawing.Point(308, 207);
+            this.pbShowPassword.Image = global::DataSmart.Properties.Resources.visible_eye1;
+            this.pbShowPassword.Location = new System.Drawing.Point(302, 207);
             this.pbShowPassword.Name = "pbShowPassword";
-            this.pbShowPassword.Size = new System.Drawing.Size(22, 20);
+            this.pbShowPassword.Size = new System.Drawing.Size(22, 22);
             this.pbShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbShowPassword.TabIndex = 9;
             this.pbShowPassword.TabStop = false;
