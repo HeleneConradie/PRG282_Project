@@ -1,6 +1,7 @@
 ﻿using DataSmart.Data_Access_Layer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -12,6 +13,7 @@ namespace DataSmart.Business_Logic_Layer
     {
         DH_Module module = new DH_Module();
         List<Module> Modules = new List<Module>();
+        DataTable dataTableTemp = new DataTable();
 
         string ModuleCode;
         string ModuleName;
@@ -70,16 +72,10 @@ namespace DataSmart.Business_Logic_Layer
             return Modules;
         }
 
-        public List<Module> DisplaySearchedModule(string ModuleCode)
+        public DataTable DisplaySearchedModule(string ModuleCode)
         {
-            string FoundModule = module.ReadModule(ModuleCode);
-            if (FoundModule != null)
-            {
-                string[] ModuleContent = FoundModule.Split('#');
-                Modules.Add(new Module(ModuleContent[0], ModuleContent[1], ModuleContent[2], ModuleContent[3]));
-                return Modules;
-            }
-            return null;
+            dataTableTemp = module.ReadModule(ModuleCode);
+            return dataTableTemp;
         }
 
         public int ValidationModule(string ModuleCode, string ModuleName, string ModuleDescription, string OnlineResources)

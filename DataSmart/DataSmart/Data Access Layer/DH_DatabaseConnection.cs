@@ -12,7 +12,7 @@ namespace DataSmart.Data_Access_Layer
     {
         private bool connected = false;
 
-        private readonly string connection = @"Data Source = .; Intial Catalog = dbdDataSmart; Integrated Security = SSPI";
+        private readonly string connection = @"Data Source=DESKTOP-MK3GTIU\SQLEXPRESS;Initial Catalog=dbdDataSmart;Integrated Security=True";
 
         public string connect { get => connection; }
 

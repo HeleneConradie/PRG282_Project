@@ -19,12 +19,13 @@ namespace DataSmart.Presentation_Layer
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
+            string type;
             frmModule moduleForm = new frmModule();
-            frmDisplay displayForm = new frmDisplay();
             frmStudent studentForm = new frmStudent();
 
             if (rbtnModule.Checked == true)
             {
+                type = "Module";
                 if (rbtnModify.Checked == true)
                 {
                     this.Hide();
@@ -42,18 +43,23 @@ namespace DataSmart.Presentation_Layer
                 else if (rbtnSearch.Checked == true)
                 {
                     this.Hide();
+                    frmDisplay displayForm = new frmDisplay(type);
                     displayForm.Show();
+                    displayForm.pbStudentImageShow.Hide();
                 }
                 else if (rbtnViewAll.Checked == true)
                 {
                     this.Hide();
+                    frmDisplay displayForm = new frmDisplay(type);
                     displayForm.Show();
                     displayForm.displayModule();
+                    displayForm.pbStudentImageShow.Hide();
                 }
                 else MessageBox.Show("Please choose an option");               
             }
             if (rbtnStudent.Checked == true)
             {
+                type = "Student";
                 if (rbtnModify.Checked == true)
                 {
                     this.Hide();
@@ -70,12 +76,15 @@ namespace DataSmart.Presentation_Layer
                 }
                 else if (rbtnSearch.Checked == true)
                 {
+                    
                     this.Hide();
+                    frmDisplay displayForm = new frmDisplay(type);
                     displayForm.Show();
                 }
-                else if (rbtnViewAll.Checked == true)
-                {
+                else if (rbtnViewAll.Checked == true) 
+                { 
                     this.Hide();
+                    frmDisplay displayForm = new frmDisplay(type);
                     displayForm.Show();
                     displayForm.displayStudent();
                 }

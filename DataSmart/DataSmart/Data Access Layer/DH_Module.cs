@@ -1,6 +1,7 @@
 ﻿using DataSmart.Business_Logic_Layer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,6 @@ namespace DataSmart.Data_Access_Layer
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    //Adding values to the list that are going to be displayed
                     AllModules.Add(new Module(
                         dr.GetValue(0).ToString(),
                         dr.GetValue(1).ToString(),
@@ -45,23 +45,17 @@ namespace DataSmart.Data_Access_Layer
             }
         }
 
-        public string ReadModule(string ModuleCode)
+        public DataTable ReadModule(string ModuleCode)
         {
-            string value = "";
             try
             {
                 SqlConnection connection = new SqlConnection(dbHandler.connect);
                 string Query = "SELECT * FROM ModuleInformation WHERE ModuleCode ='" + ModuleCode + "'";
                 SqlCommand cmd = new SqlCommand(Query, connection);
-                SqlDataReader dr;
-                connection.Open();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    value = dr.GetValue(0) + "#" + dr.GetValue(1) + "#" + dr.GetValue(2) + "#" + dr.GetValue(3);
-                }
-                connection.Close();
-                return value;
+                SqlDataAdapter sqlDAdpt = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sqlDAdpt.Fill(dt);
+                return dt;
             }
             catch (SqlException sqlEx)
             {
