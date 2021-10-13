@@ -40,5 +40,20 @@ namespace DataSmart.Presentation_Layer
             reg.Show();
             this.Hide();
         }
+
+        private void pbShowPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbPassword.PasswordChar = '•';
+        }
+
+        private void pbShowPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbPassword.PasswordChar = '\0';
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            tbPassword.PasswordChar = '•';
+        }
     }
 }

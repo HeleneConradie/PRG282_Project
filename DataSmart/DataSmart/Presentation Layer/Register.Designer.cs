@@ -32,6 +32,7 @@ namespace DataSmart.Presentation_Layer
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnRegBack = new System.Windows.Forms.Button();
             this.pnlRegister = new System.Windows.Forms.Panel();
+            this.cbCampus = new System.Windows.Forms.ComboBox();
             this.pbLogoReigster = new System.Windows.Forms.PictureBox();
             this.lblConPass = new System.Windows.Forms.Label();
             this.tbConPass = new System.Windows.Forms.TextBox();
@@ -47,9 +48,12 @@ namespace DataSmart.Presentation_Layer
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblRegisterHeading = new System.Windows.Forms.Label();
-            this.cbCampus = new System.Windows.Forms.ComboBox();
+            this.pbShowPass = new System.Windows.Forms.PictureBox();
+            this.pbShowCon = new System.Windows.Forms.PictureBox();
             this.pnlRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowCon)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -82,6 +86,8 @@ namespace DataSmart.Presentation_Layer
             // 
             this.pnlRegister.BackgroundImage = global::DataSmart.Properties.Resources.Top_Back;
             this.pnlRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlRegister.Controls.Add(this.pbShowCon);
+            this.pnlRegister.Controls.Add(this.pbShowPass);
             this.pnlRegister.Controls.Add(this.cbCampus);
             this.pnlRegister.Controls.Add(this.pbLogoReigster);
             this.pnlRegister.Controls.Add(this.lblConPass);
@@ -102,6 +108,18 @@ namespace DataSmart.Presentation_Layer
             this.pnlRegister.Name = "pnlRegister";
             this.pnlRegister.Size = new System.Drawing.Size(746, 249);
             this.pnlRegister.TabIndex = 12;
+            // 
+            // cbCampus
+            // 
+            this.cbCampus.FormattingEnabled = true;
+            this.cbCampus.Items.AddRange(new object[] {
+            "PTA",
+            "PE",
+            "KP"});
+            this.cbCampus.Location = new System.Drawing.Point(409, 120);
+            this.cbCampus.Name = "cbCampus";
+            this.cbCampus.Size = new System.Drawing.Size(154, 21);
+            this.cbCampus.TabIndex = 18;
             // 
             // pbLogoReigster
             // 
@@ -130,6 +148,7 @@ namespace DataSmart.Presentation_Layer
             this.tbConPass.Name = "tbConPass";
             this.tbConPass.Size = new System.Drawing.Size(153, 20);
             this.tbConPass.TabIndex = 15;
+            this.tbConPass.TextChanged += new System.EventHandler(this.tbConPass_TextChanged);
             // 
             // lblPassword
             // 
@@ -148,6 +167,7 @@ namespace DataSmart.Presentation_Layer
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(153, 20);
             this.tbPassword.TabIndex = 13;
+            this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // lblUsername
             // 
@@ -167,6 +187,7 @@ namespace DataSmart.Presentation_Layer
             this.tbUsername.ReadOnly = true;
             this.tbUsername.Size = new System.Drawing.Size(153, 20);
             this.tbUsername.TabIndex = 11;
+            this.tbUsername.Click += new System.EventHandler(this.tbUsername_Click);
             // 
             // lblCampus
             // 
@@ -244,17 +265,29 @@ namespace DataSmart.Presentation_Layer
             this.lblRegisterHeading.TabIndex = 0;
             this.lblRegisterHeading.Text = "Register";
             // 
-            // cbCampus
+            // pbShowPass
             // 
-            this.cbCampus.FormattingEnabled = true;
-            this.cbCampus.Items.AddRange(new object[] {
-            "PTA",
-            "PE",
-            "KP"});
-            this.cbCampus.Location = new System.Drawing.Point(409, 120);
-            this.cbCampus.Name = "cbCampus";
-            this.cbCampus.Size = new System.Drawing.Size(154, 21);
-            this.cbCampus.TabIndex = 18;
+            this.pbShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowPass.Location = new System.Drawing.Point(569, 172);
+            this.pbShowPass.Name = "pbShowPass";
+            this.pbShowPass.Size = new System.Drawing.Size(22, 20);
+            this.pbShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowPass.TabIndex = 19;
+            this.pbShowPass.TabStop = false;
+            this.pbShowPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbShowPass_MouseDown);
+            this.pbShowPass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbShowPass_MouseUp);
+            // 
+            // pbShowCon
+            // 
+            this.pbShowCon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowCon.Location = new System.Drawing.Point(569, 198);
+            this.pbShowCon.Name = "pbShowCon";
+            this.pbShowCon.Size = new System.Drawing.Size(22, 20);
+            this.pbShowCon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowCon.TabIndex = 20;
+            this.pbShowCon.TabStop = false;
+            this.pbShowCon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbShowCon_MouseDown);
+            this.pbShowCon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbShowCon_MouseUp);
             // 
             // frmRegister
             // 
@@ -269,6 +302,8 @@ namespace DataSmart.Presentation_Layer
             this.pnlRegister.ResumeLayout(false);
             this.pnlRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowCon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,5 +329,7 @@ namespace DataSmart.Presentation_Layer
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblRegisterHeading;
         private System.Windows.Forms.ComboBox cbCampus;
+        private System.Windows.Forms.PictureBox pbShowCon;
+        private System.Windows.Forms.PictureBox pbShowPass;
     }
 }
