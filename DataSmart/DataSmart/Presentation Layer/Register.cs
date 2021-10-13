@@ -53,6 +53,13 @@ namespace DataSmart.Presentation_Layer
                     MessageBox.Show("Email is invalid!");
                     break;
             }
+            tbName.Clear();
+            tbSurname.Clear();
+            tbEmail.Clear();
+            tbPassword.Clear();
+            tbConPass.Clear();
+            cbCampus.SelectedIndex = -1;
+
         }
 
         private void btnRegBack_Click(object sender, EventArgs e)

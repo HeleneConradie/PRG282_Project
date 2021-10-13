@@ -35,13 +35,15 @@ namespace DataSmart.Business_Logic_Layer
             }
 
             //Getting latest user and incrementing UserID
-            List<string> Users = new List<string>();
-            string[] latest = Users[0].Split('#');
+
+            List<string> Users;
+            Users = DH_TextFiles.ReadUserDetails();
+            string[] latest = Users.Last().Split('#');
             int UserID = int.Parse(latest[0]) + 1;
 
             string Login = UserName + "#" + Password;
             string Details = UserID.ToString() + "#" + Name + "#" + Surname + "#" + email + "#" + Campus;
-            if (DH_WriteTextFiles.WriteTextFiles(Login, Details))
+            if (DH_TextFiles.WriteTextFiles(Login, Details))
             {
                 return -1;
             }

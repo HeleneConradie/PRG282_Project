@@ -604,6 +604,7 @@ namespace DataSmart.Presentation_Layer
             this.pbStudentImage2.Location = new System.Drawing.Point(574, 196);
             this.pbStudentImage2.Name = "pbStudentImage2";
             this.pbStudentImage2.Size = new System.Drawing.Size(100, 50);
+            this.pbStudentImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbStudentImage2.TabIndex = 30;
             this.pbStudentImage2.TabStop = false;
             // 

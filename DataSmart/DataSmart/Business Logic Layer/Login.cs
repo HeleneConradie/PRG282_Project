@@ -12,7 +12,7 @@ namespace DataSmart.Business_Logic_Layer
         public static bool CheckLogin(string Username, string Password)
         {
             List<string> Users = new List<string>();
-            Users = DH_ReadLogin.ReadLogin();
+            Users = DH_TextFiles.ReadLogin();
             string check = Username + "#" + Password;
             if (Users != null)
             {

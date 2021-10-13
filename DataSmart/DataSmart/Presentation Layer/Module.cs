@@ -113,6 +113,9 @@ namespace DataSmart.Presentation_Layer
                 }
                 MessageBox.Show("Module has been deleted successfully!", "Success!");
                 tbModCode2.Clear();
+                tbModName2.Clear();
+                tbModDesc2.Clear();
+                tbOnlineRes2.Clear();
                 tbModCode2.Focus();
             }
         }

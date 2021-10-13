@@ -53,11 +53,10 @@
     <Compile Include="Business Logic Layer\Student.cs" />
     <Compile Include="Business Logic Layer\StudentModule.cs" />
     <Compile Include="Data Access Layer\DH_DatabaseConnection.cs" />
-    <Compile Include="Data Access Layer\DH_ReadLogin.cs" />
     <Compile Include="Data Access Layer\DH_Module.cs" />
     <Compile Include="Data Access Layer\DH_Student.cs" />
     <Compile Include="Data Access Layer\DH_StudentModule.cs" />
-    <Compile Include="Data Access Layer\DH_WriteTextFiles.cs" />
+    <Compile Include="Data Access Layer\DH_TextFiles.cs" />
     <Compile Include="Presentation Layer\Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -91,15 +91,15 @@ namespace DataSmart.Presentation_Layer
                     MessageBox.Show("Something went wrong!", "OOPS!");
                 }
                 MessageBox.Show("Student has been updated successfully!", "Success!");
-                tbStudentNumber.Clear();
-                tbFirstName.Clear();
-                tbMiddleName.Clear();
-                tbLastName.Clear();
+                tbStudentNumber2.Clear();
+                tbStudentFirstName2.Clear();
+                tbMiddleName2.Clear();
+                tbLastName2.Clear();
                 pbStudentImage2.Image = null;
-                cbGender.SelectedIndex = -1;
-                tbPhoneNumber.Clear();
-                tbAddress.Clear();
-                tbStudentNumber.Focus();
+                cbGender2.SelectedIndex = -1;
+                tbPhoneNumber2.Clear();
+                tbAddress2.Clear();
+                tbStudentNumber2.Focus();
             }
         }
 
@@ -126,8 +126,15 @@ namespace DataSmart.Presentation_Layer
                     MessageBox.Show("Something went wrong!", "OOPS!");
                 }
                 MessageBox.Show("Student has been deleted successfully!", "Success!");
-                tbStudentNumber.Clear();
-                tbStudentNumber.Focus();
+                tbStudentNumber2.Clear();
+                tbStudentFirstName2.Clear();
+                tbMiddleName2.Clear();
+                tbLastName2.Clear();
+                pbStudentImage2.Image = null;
+                cbGender2.SelectedIndex = -1;
+                tbPhoneNumber2.Clear();
+                tbAddress2.Clear();
+                tbStudentNumber2.Focus();
             }
         }
 
