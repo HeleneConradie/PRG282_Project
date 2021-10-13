@@ -305,7 +305,6 @@ namespace DataSmart.Presentation_Layer
             this.Controls.Add(this.btnRegBack);
             this.Name = "frmRegister";
             this.Text = "Register";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRegister_FormClosing);
             this.pnlRegister.ResumeLayout(false);
             this.pnlRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoReigster)).EndInit();
